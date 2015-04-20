@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Hocus-Pocus</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="hocus-pocus.css">
-    <link rel="stylesheet" href="docs.css">
+    <link rel="stylesheet" href="/css/hocus-pocus.css">
   </head>
 
   <body>
@@ -15,8 +14,8 @@
       <div class="grid">
         <div class="grid-item 1/5">
           <ul>
-            <li><a href="index.html">Quick Start</a></li>
-            <li><a href="principles.html">Principles</a></li>
+            <li><a href="/">Quick Start</a></li>
+            <li><a href="/principles">Principles</a></li>
           </ul>
           <ul>
             <li>Global (base, box-sizing, normalize, colors)</li>
@@ -26,44 +25,34 @@
           </ul>
         </div>
         <div class="grid-item 4/5">
-          <p>
-  Hocus-Pocus is a simple and design-free <a href="http://sass-lang.com">SASS</a>
-  micro framework, ideal as a CSS starter kit.
-</p>
+          <p>Hocus-Pocus is a simple and design-free <a href="http://sass-lang.com">SASS</a>
+micro framework, ideal as a CSS starter kit.</p>
 
-<p>
-  It could not exist without work of awesome people behind these projects:
-</p>
+<p>It could not exist without work of awesome people behind these projects:</p>
 
 <ul>
-  <li><a href="https://github.com/inuitcss">inuitcss</a></li>
-  <li><a href="https://github.com/necolas/normalize.css">normalize.css</a></li>
-  <li><a href="https://github.com/kristoferjoseph/flexboxgrid">flexboxgrid</a></li>
-  <li><a href="https://github.com/hiulit/Sassy-Gridlover">sassy-gridlover</a></li>
-  <li><a href="https://github.com/mrmrs/colors">colors</a></li>
+<li><a href="https://github.com/inuitcss">inuitcss</a></li>
+<li><a href="https://github.com/primer/primer">primer</a></li>
+<li><a href="https://github.com/necolas/normalize.css">normalize.css</a></li>
+<li><a href="https://github.com/kristoferjoseph/flexboxgrid">flexboxgrid</a></li>
+<li><a href="https://github.com/hiulit/Sassy-Gridlover">sassy-gridlover</a></li>
+<li><a href="https://github.com/mrmrs/colors">colors</a></li>
 </ul>
 
 <h3>Quick Start</h3>
 
 <p>To install Hocus-Pocus use Bower:</p>
-
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>bower install hocus-pocus</code></pre></div>
-
-<p>
-  Or <a href="https://rails-assets.org">Rails Assets</a> if you have a Ruby app:
-</p>
-
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>bower install hocus-pocus
+</code></pre></div>
+<p>Or <a href="https://rails-assets.org">Rails Assets</a> if you have a Ruby app:</p>
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># Gemfile</span>
 
-<span class="n">source</span> <span class="s1">&#39;https://rails-assets.org&#39;</span>
-
-<span class="n">gem</span> <span class="s1">&#39;rails-assets-hocus-pocus&#39;</span></code></pre></div>
-
-<p>
-  Then include the main Hocus-Pocus file after your variables, but before
-  the rest of stylesheets:
-</p>
-
+<span class="n">source</span> <span class="s1">&#39;https://rails-assets.org&#39;</span> <span class="k">do</span>
+  <span class="n">gem</span> <span class="s1">&#39;rails-assets-hocus-pocus&#39;</span>
+<span class="k">end</span>
+</code></pre></div>
+<p>Then include the main Hocus-Pocus file after your variables, but before
+the rest of stylesheets:</p>
 <div class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="na">$base-font-family</span><span class="o">:</span> <span class="s2">&quot;Open Sans&quot;</span><span class="o">,</span> <span class="no">sans-serif</span>
 <span class="na">$grid-container</span><span class="o">:</span> <span class="mi">70</span><span class="kt">rem</span>
 
@@ -71,15 +60,23 @@
 
 <span class="k">@import</span> <span class="s">&quot;objects/meter&quot;</span>
 <span class="k">@import</span> <span class="s">&quot;objects/price-box&quot;</span>
-<span class="k">@import</span> <span class="s">&quot;inbox/landing-headings-fix&quot;</span></code></pre></div>
-
+<span class="k">@import</span> <span class="s">&quot;inbox/landing-headings-fix&quot;</span>
+</code></pre></div>
 <h3>Contributing</h3>
 
-<p>
-  <a href="https://github.com/bkzl/hocus-pocus/issues">Add a new issue</a>
-  for bugs and ideas.
-</p>
+<p><a href="https://github.com/bkzl/hocus-pocus/issues">Add a new issue</a>
+for bugs and ideas.</p>
 
+<h3>Development</h3>
+
+<p>To run docs locally you need to install <code>jekyll</code> and <code>redcarpet</code> gems,
+then run:</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>jekyll serve
+</code></pre></div>
+<p>To build and deploy to production:</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>npm install
+<span class="nv">$ </span>grunt publish
+</code></pre></div>
         </div>
       </div>
     </div>

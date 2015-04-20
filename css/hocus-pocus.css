@@ -796,3 +796,10 @@ thead {
 
 td, th {
   padding: 0.32813rem; }
+
+.grid-preview {
+  background: #0074d9;
+  color: white;
+  text-align: center; }
+  .grid-preview .grid-preview {
+    background: #7fdbff; }
