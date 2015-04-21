@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hocus-Pocus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/hocus-pocus.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <h2><a href="/">Hocus-Pocus</a></h2>
+      <div class="grid">
+        <div class="grid-item 1/5">
+          <ul>
+            <li><a href="/global">Global</a></li>
+            <li><a href="/layout">Layout</a></li>
+            <li><a href="/type">Type</a></li>
+            <li><a href="/tables">Tables</a></li>
+          </ul>
+        </div>
+        <div class="grid-item 4/5">
+          <ol>
+<li><p><a href="https://github.com/necolas/normalize.css">Normalize</a> is included.</p></li>
+<li><p>Box-sizing is changed for all elements (excluding <code>img</code>) and set to
+<code>border-box</code>.</p>
+<div class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nt">html</span>
+  <span class="na">box-sizing</span><span class="o">:</span> <span class="no">border</span><span class="o">-</span><span class="n">box</span>
+
+<span class="o">*,</span> <span class="o">*</span><span class="nd">:before</span><span class="o">,</span> <span class="o">*</span><span class="nd">:after</span>
+  <span class="na">box-sizing</span><span class="o">:</span> <span class="no">inherit</span>
+
+<span class="nt">img</span>
+  <span class="na">box-sizing</span><span class="o">:</span> <span class="no">content</span><span class="o">-</span><span class="n">box</span>
+</code></pre></div></li>
+<li><p>Vertical scrollbar is always visible.</p>
+<div class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nt">html</span>
+  <span class="na">overflow-y</span><span class="o">:</span> <span class="no">scroll</span>
+</code></pre></div></li>
+</ol>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
