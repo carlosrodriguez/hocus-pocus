@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Hocus-Pocus</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/hocus-pocus.css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:100,400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/docs.css">
   </head>
 
   <body>
@@ -14,9 +15,9 @@
       <div class="grid">
         <div class="grid-item 1/5">
           <ul>
+            <li><a href="/">Quick Start</a></li>
             <li><a href="/global">Global</a></li>
             <li><a href="/layout">Layout</a></li>
-            <li><a href="/spacing">Spacing</a></li>
             <li><a href="/type">Type</a></li>
             <li><a href="/tables">Tables</a></li>
           </ul>
@@ -24,91 +25,127 @@
         <div class="grid-item 4/5">
           <p>Vertical rhythm based on <a href="https://github.com/hiulit/Sassy-Gridlover">sassy-gridlover</a>.</p>
 
-<p>Base font is described by following variables: <code>$base-font-size</code>, <code>$font-family-base</code>, <code>$font-weight-normal</code> and <code>$color-font</code></p>
+<p>Base font is described by following variables: <code>$font-size-base</code>,
+<code>$font-family-base</code>, <code>$font-weight-normal</code> and <code>$color-font</code></p>
 
 <h3>Headings</h3>
 
 <h1>Heading Level 1</h1>
-
-<h2>Heading Level 2</h2>
-
-<h3>Heading Level 3</h3>
-
-<h4>Heading Level 4</h4>
-
-<h5>Heading Level 5</h5>
-
-<h6>Heading Level 6</h6>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1&gt;</span>Heading Level 1<span class="nt">&lt;/h1&gt;</span>
-<span class="nt">&lt;h2&gt;</span>Heading Level 2<span class="nt">&lt;/h2&gt;</span>
-<span class="nt">&lt;h3&gt;</span>Heading Level 3<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;h4&gt;</span>Heading Level 4<span class="nt">&lt;/h4&gt;</span>
-<span class="nt">&lt;h5&gt;</span>Heading Level 5<span class="nt">&lt;/h5&gt;</span>
-<span class="nt">&lt;h6&gt;</span>Heading Level 6<span class="nt">&lt;/h6&gt;</span>
 </code></pre></div>
-<h3>Paragraph</h3>
+<h2>Heading Level 2</h2>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h2&gt;</span>Heading Level 2<span class="nt">&lt;/h2&gt;</span>
+</code></pre></div>
+<h3>Heading Level 3</h3>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h3&gt;</span>Heading Level 3<span class="nt">&lt;/h3&gt;</span>
+</code></pre></div>
+<h4>Heading Level 4</h4>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h4&gt;</span>Heading Level 4<span class="nt">&lt;/h4&gt;</span>
+</code></pre></div>
+<h5>Heading Level 5</h5>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h5&gt;</span>Heading Level 5<span class="nt">&lt;/h5&gt;</span>
+</code></pre></div>
+<h6>Heading Level 6</h6>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h6&gt;</span>Heading Level 6<span class="nt">&lt;/h6&gt;</span>
+</code></pre></div>
+<h3>Paragraphs</h3>
 
 <p>
   <strong>Pellentesque habitant morbi tristique</strong> senectus et netus
-  et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
-  ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-  semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo.
-  Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi,
-  condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean
-  fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis
-  tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar
-  facilisis. Ut felis.
+  et malesuada fames ac turpis egestas. <em>Vestibulum tortor quam</em>,
+  feugiat vitae, ultricies eget, <small>tempor sit amet, ante</small>. Donec eu
+  libero sit amet quam egestas semper. <a href="#">Aenean ultricies</a>
+  mi vitae est.
 </p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;strong&gt;</span>Pellentesque habitant morbi tristique<span class="nt">&lt;/strong&gt;</span> senectus et netus
+  et malesuada fames ac turpis egestas. <span class="nt">&lt;em&gt;</span>Vestibulum tortor quam<span class="nt">&lt;/em&gt;</span>,
+  feugiat vitae, ultricies eget, <span class="nt">&lt;small&gt;</span>tempor sit amet, ante<span class="nt">&lt;/small&gt;</span>.
+  Donec eu libero sit amet quam egestas semper. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Aenean
+  ultricies<span class="nt">&lt;/a&gt;</span> mi vitae est.
+<span class="nt">&lt;/p&gt;</span>
+</code></pre></div>
+<h3>Blockquote</h3>
 
 <blockquote>
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna.
     Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida.
-    Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est
-    malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium
-    ornare est.
   </p>
 </blockquote>
-
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;blockquote&gt;</span>
+  <span class="nt">&lt;p&gt;</span>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna.
+    Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida.
+  <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span>
+</code></pre></div>
 <h3>Lists</h3>
 
 <ol>
   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
   <li>Aliquam tincidunt mauris eu risus.</li>
 </ol>
-
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ol&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Aliquam tincidunt mauris eu risus.<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
+</code></pre></div>
 <ul>
   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-  <li>Aliquam <small>tincidunt mauris</small> eu risus.</li>
-  <li>Lorem ipsum dolor sit amet
+  <li>
+    Aliquam tincidunt mauris eu risus.
     <ul>
-      <li>Lorem ipsum <span class="micro">dolor sit amet</span>, consectetuer adipiscing elit.</li>
+      <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
       <li>Aliquam tincidunt mauris eu risus.</li>
     </ul>
   </li>
 </ul>
-
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>
+    Aliquam tincidunt mauris eu risus.
+    <span class="nt">&lt;ul&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Aliquam tincidunt mauris eu risus.<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div>
 <dl>
   <dt>Definition list</dt>
-  <dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+  <dd>
+    Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
     aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-    commodo consequat.</dd>
-  <dt>Lorem ipsum dolor sit amet</dt>
-  <dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-    commodo consequat.</dd>
+    commodo consequat.
+  </dd>
 </dl>
-
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;dl&gt;</span>
+  <span class="nt">&lt;dt&gt;</span>Definition list<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>
+    Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+    commodo consequat.
+  <span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span>
+</code></pre></div>
 <h3>Code</h3>
 
-<pre><code>
+<pre>
+<code>
 .hocus-pocus {
   display: block;
-  color: black;
-  text-align: center;
 }
-</code></pre>
-
+</code>
+</pre>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;pre&gt;</span>
+  <span class="nt">&lt;code&gt;</span>
+    .hocus-pocus {
+      display: block;
+    }
+  <span class="nt">&lt;/code&gt;</span>
+<span class="nt">&lt;/pre&gt;</span>
+</code></pre></div>
 <h3>Rule</h3>
 
 <p><hr></p>
@@ -116,6 +153,33 @@
 </code></pre></div>
 <h3>Text helpers</h3>
 
+<p class="text-light">Lorem ipsum dolor sit amet</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-light&quot;</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/p&gt;</span>
+</code></pre></div>
+<p class="text-normal">Lorem ipsum dolor sit amet</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-normal&quot;</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/p&gt;</span>
+</code></pre></div>
+<p class="text-bold">Lorem ipsum dolor sit amet</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-bold&quot;</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/p&gt;</span>
+</code></pre></div>
+<p class="text-small">Lorem ipsum dolor sit amet</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-small&quot;</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/p&gt;</span>
+</code></pre></div>
+<p class="text-micro">Lorem ipsum dolor sit amet</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-micro&quot;</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/p&gt;</span>
+</code></pre></div>
+<p class="text-mono">Lorem ipsum dolor sit amet</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-mono&quot;</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/p&gt;</span>
+</code></pre></div>
+<p class="text-left">Lorem ipsum dolor sit amet</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-left&quot;</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/p&gt;</span>
+</code></pre></div>
+<p class="text-center">Lorem ipsum dolor sit amet</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-center&quot;</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/p&gt;</span>
+</code></pre></div>
+<p class="text-right">Lorem ipsum dolor sit amet</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-right&quot;</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/p&gt;</span>
+</code></pre></div>
         </div>
       </div>
     </div>

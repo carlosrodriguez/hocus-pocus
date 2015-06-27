@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Hocus-Pocus</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/hocus-pocus.css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:100,400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/docs.css">
   </head>
 
   <body>
@@ -14,17 +15,16 @@
       <div class="grid">
         <div class="grid-item 1/5">
           <ul>
+            <li><a href="/">Quick Start</a></li>
             <li><a href="/global">Global</a></li>
             <li><a href="/layout">Layout</a></li>
-            <li><a href="/spacing">Spacing</a></li>
             <li><a href="/type">Type</a></li>
             <li><a href="/tables">Tables</a></li>
           </ul>
         </div>
         <div class="grid-item 4/5">
-          <h3>Grid system</h3>
-
-<p>Centered page wrapper with width set to <code>$grid-container</code></p>
+          <p>Use <code>.container</code> class to create a centered wrapper which has width of
+<code>$grid-container</code>.</p>
 
 <div class="container grid-preview">
   .container
@@ -33,8 +33,9 @@
   ...
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
-<p><code>.grid</code> with nested <code>.grid-item</code> and <a href="/spacing">width helper</a>
-are used to build grid:</p>
+<h3>Grid</h3>
+
+<p>Use <code>.grid</code> with nested <code>.grid-item</code> elements to build a grid:</p>
 
 <div class="grid">
   <div class="grid-item 1/3">
@@ -97,7 +98,7 @@ and vertically:</p>
 </code></pre></div>
 <div class="grid grid-top">
   <div class="grid-item 1/2">
-    <div class="grid-preview pv">
+    <div class="grid-preview grid-preview-large">
       .grid.grid-top > .grid-item.1/2
     </div>
   </div>
@@ -113,7 +114,7 @@ and vertically:</p>
 </code></pre></div>
 <div class="grid grid-middle">
   <div class="grid-item 1/2">
-    <div class="grid-preview pv">
+    <div class="grid-preview grid-preview-large">
       .grid.grid-middle > .grid-item.1/2
     </div>
   </div>
@@ -129,7 +130,7 @@ and vertically:</p>
 </code></pre></div>
 <div class="grid grid-bottom">
   <div class="grid-item 1/2">
-    <div class="grid-preview pv">
+    <div class="grid-preview grid-preview-large">
       .grid.grid-bottom > .grid-item.1/2
     </div>
   </div>
@@ -145,7 +146,7 @@ and vertically:</p>
 </code></pre></div>
 <p>Moreover, you can create flat grid without the gutter:</p>
 
-<div class="grid grid-flat grid-preview pv">
+<div class="grid grid-flat grid-preview">
   <div class="grid-item 1/2">
     <div class="grid-preview">
       .grid.grid-flat > .grid-item.1/2
@@ -161,6 +162,81 @@ and vertically:</p>
   ...
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
+<h3>Width helpers</h3>
+
+<p>Width helpers can be use for various elements like grid items, inputs or
+table. Fractions of the following numbers are available: <code>n/1</code>, <code>n/2</code>,
+<code>n/3</code>, <code>n/4</code>, <code>n/5</code>, <code>n/6</code>, <code>n/8</code>, <code>n/9</code>, <code>n/10</code> and <code>n/12</code>. </p>
+
+<div class="grid">
+  <div class="grid-item 1/1">
+    <div class="grid-preview">
+      .1/1
+    </div>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="grid-item 1/4">
+    <div class="grid-preview">
+      .1/4, .2/8, .3/12
+    </div>
+  </div>
+  <div class="grid-item 3/4">
+    <div class="grid-preview">
+      .3/4, .6/8, .9/12
+    </div>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="grid-item 2/5">
+    <div class="grid-preview">
+      .2/5, .4/10
+    </div>
+  </div>
+  <div class="grid-item 3/5">
+    <div class="grid-preview">
+      .3/5, .6/10
+    </div>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="grid-item 1/6">
+    <div class="grid-preview">
+      .1/6, .2/12
+    </div>
+  </div>
+  <div class="grid-item 5/6">
+    <div class="grid-preview">
+      .5/6, .10/12
+    </div>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="grid-item 1/2">
+    <div class="grid-preview">
+      .1/2, .2/4, .3/6, .4/8, .5/10, .6/12
+    </div>
+  </div>
+  <div class="grid-item 1/8">
+    <div class="grid-preview">
+      .1/8
+    </div>
+  </div>
+  <div class="grid-item 3/8">
+    <div class="grid-preview">
+      .3/8
+    </div>
+  </div>
+</div>
+
+<h3>Spacing</h3>
+
+<p><em>upcoming</em></p>
+
         </div>
       </div>
     </div>

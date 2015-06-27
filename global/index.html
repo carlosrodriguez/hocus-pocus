@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Hocus-Pocus</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/hocus-pocus.css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:100,400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/docs.css">
   </head>
 
   <body>
@@ -14,9 +15,9 @@
       <div class="grid">
         <div class="grid-item 1/5">
           <ul>
+            <li><a href="/">Quick Start</a></li>
             <li><a href="/global">Global</a></li>
             <li><a href="/layout">Layout</a></li>
-            <li><a href="/spacing">Spacing</a></li>
             <li><a href="/type">Type</a></li>
             <li><a href="/tables">Tables</a></li>
           </ul>
@@ -24,34 +25,94 @@
         <div class="grid-item 4/5">
           <p><a href="https://github.com/necolas/normalize.css">Normalize</a> is included.</p>
 
-<p>Box-sizing is changed for all elements (excluding <code>img</code>) and set to <code>border-box</code>.</p>
+<p>Box-sizing is changed for all elements (excluding <code>&lt;img&gt;</code>) and set to <code>border-box</code>.</p>
 
 <p>Vertical scrollbar is always visible.</p>
 
 <h3>Defaults</h3>
 
+<p>To see all available defaults please check the <code>sass/_defaults.sass</code> file.
+Variables listed below are recommended to set on your part.</p>
+<div class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="na">$color-ui</span><span class="o">:</span> <span class="nv">$color-silver</span>
+<span class="na">$color-font</span><span class="o">:</span> <span class="nv">$color-black</span>
+<span class="na">$color-link</span><span class="o">:</span> <span class="nv">$color-blue</span>
+<span class="na">$color-muted</span><span class="o">:</span> <span class="nv">$color-gray</span>
+
+<span class="na">$font-leading</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.4</span> <span class="nv">!default</span>
+<span class="na">$font-size-micro</span><span class="o">:</span> <span class="mi">11</span> <span class="nv">!default</span>
+<span class="na">$font-size-small</span><span class="o">:</span> <span class="mi">13</span> <span class="nv">!default</span>
+<span class="na">$font-size-base</span><span class="o">:</span> <span class="mi">15</span> <span class="nv">!default</span>
+
+<span class="na">$font-family-base</span><span class="o">:</span> <span class="no">sans-serif</span>
+<span class="na">$font-family-headings</span><span class="o">:</span> <span class="nv">$font-family-base</span>
+<span class="na">$font-family-monospace</span><span class="o">:</span> <span class="no">monospace</span>
+
+<span class="na">$grid-container</span><span class="o">:</span> <span class="mi">68</span><span class="kt">rem</span>
+<span class="na">$grid-gutter</span><span class="o">:</span> <span class="nv">$spacing-unit</span>
+
+<span class="na">$base-border-radius</span><span class="o">:</span> <span class="mi">4</span><span class="kt">px</span>
+</code></pre></div>
 <h3>Colors</h3>
 
+<div class="grid">
+  <div class="grid-item 1/6"><div class="color-block color-block-aqua">$color-aqua</div></div>
+  <div class="grid-item 1/6"><div class="color-block color-block-blue">$color-blue</div></div>
+  <div class="grid-item 1/6"><div class="color-block color-block-navy">$color-navy</div></div>
+  <div class="grid-item 1/6"><div class="color-block color-block-teal">$color-teal</div></div>
+  <div class="grid-item 1/6"><div class="color-block color-block-green">$color-green</div></div>
+  <div class="grid-item 1/6"><div class="color-block color-block-olive">$color-olive</div></div>
+
+  <div class="grid-item 1/6"><div class="color-block color-block-lime">$color-lime</div></div>
+  <div class="grid-item 1/6"><div class="color-block color-block-yellow">$color-yellow</div></div>
+  <div class="grid-item 1/6"><div class="color-block color-block-orange">$color-orange</div></div>
+  <div class="grid-item 1/6"><div class="color-block color-block-red">$color-red</div></div>
+  <div class="grid-item 1/6"><div class="color-block color-block-fuchsia">$color-fuchsia</div></div>
+  <div class="grid-item 1/6"><div class="color-block color-block-purple">$color-purple</div></div>
+
+  <div class="grid-item 1/6"><div class="color-block color-block-maroon">$color-maroon</div></div>
+  <div class="grid-item 1/6"><div class="color-block color-block-white">$color-white</div></div>
+  <div class="grid-item 1/6"><div class="color-block color-block-silver">$color-silver</div></div>
+  <div class="grid-item 1/6"><div class="color-block color-block-gray">$color-gray</div></div>
+  <div class="grid-item 1/6"><div class="color-block color-block-black">$color-black</div></div>
+</div>
+
+<h3>Mixins</h3>
+
+<p>There is a <code>font-size</code> mixin which allows to set the element&#39;s font size
+and keep the proper vertical rhytm:</p>
+<div class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nt">div</span>
+  <span class="k">@include</span><span class="nd"> font-size</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c1">// div</span>
+<span class="c1">//   font-size: 0.75rem;</span>
+<span class="c1">//   line-height: 1.0625rem;</span>
+</code></pre></div>
 <h3>Functions</h3>
 
-<p>Sizing functions, return quotient/product of the provided value.</p>
-<div class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="c1">// quarter($value)</span>
-<span class="na">padding</span><span class="o">:</span> <span class="nf">quarter</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span> <span class="c1">// 3px</span>
+<p>Sizing functions return a quotient/product of the provided value.</p>
+<div class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nt">div</span>
+  <span class="na">padding</span><span class="o">:</span> <span class="nf">quarter</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span>
+  <span class="c1">// padding: 3px</span>
 
-<span class="c1">// third($value)</span>
-<span class="na">padding</span><span class="o">:</span> <span class="nf">third</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span> <span class="c1">// 4px</span>
+<span class="nt">div</span>
+  <span class="na">padding</span><span class="o">:</span> <span class="nf">third</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span>
+  <span class="c1">// padding: 4px</span>
 
-<span class="c1">// halve($value)</span>
-<span class="na">padding</span><span class="o">:</span> <span class="nf">halve</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span> <span class="c1">// 6px</span>
+<span class="nt">div</span>
+  <span class="na">padding</span><span class="o">:</span> <span class="nf">halve</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span>
+  <span class="c1">// padding: 6px</span>
 
-<span class="c1">// double($value)</span>
-<span class="na">padding</span><span class="o">:</span> <span class="nf">double</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span> <span class="c1">// 24px</span>
+<span class="nt">div</span>
+  <span class="na">padding</span><span class="o">:</span> <span class="nf">double</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span>
+  <span class="c1">// padding: 24px</span>
 
-<span class="c1">// triple($value)</span>
-<span class="na">padding</span><span class="o">:</span> <span class="nf">triple</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span> <span class="c1">// 36px</span>
+<span class="nt">div</span>
+  <span class="na">padding</span><span class="o">:</span> <span class="nf">triple</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span>
+  <span class="c1">// padding: 36px</span>
 
-<span class="c1">// quadruple($value)</span>
-<span class="na">padding</span><span class="o">:</span> <span class="nf">quadruple</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span> <span class="c1">// 48px</span>
+<span class="nt">div</span>
+  <span class="na">padding</span><span class="o">:</span> <span class="nf">quadruple</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span>
+  <span class="c1">// padding: 48px</span>
 </code></pre></div>
         </div>
       </div>

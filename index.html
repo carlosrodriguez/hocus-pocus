@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Hocus-Pocus</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/hocus-pocus.css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:100,400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/docs.css">
   </head>
 
   <body>
@@ -14,9 +15,9 @@
       <div class="grid">
         <div class="grid-item 1/5">
           <ul>
+            <li><a href="/">Quick Start</a></li>
             <li><a href="/global">Global</a></li>
             <li><a href="/layout">Layout</a></li>
-            <li><a href="/spacing">Spacing</a></li>
             <li><a href="/type">Type</a></li>
             <li><a href="/tables">Tables</a></li>
           </ul>
@@ -49,8 +50,8 @@ micro framework, ideal as a CSS starter kit.</p>
 <span class="k">end</span>
 </code></pre></div>
 <p>Then include the main Hocus-Pocus file after your variables, but before
-the rest of stylesheets:</p>
-<div class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="na">$base-font-family</span><span class="o">:</span> <span class="s2">&quot;Open Sans&quot;</span><span class="o">,</span> <span class="no">sans-serif</span>
+the rest of your stylesheets:</p>
+<div class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="na">$font-family-base</span><span class="o">:</span> <span class="s2">&quot;Open Sans&quot;</span><span class="o">,</span> <span class="no">sans-serif</span>
 <span class="na">$grid-container</span><span class="o">:</span> <span class="mi">70</span><span class="kt">rem</span>
 
 <span class="k">@import</span> <span class="s">&quot;bower_components/hocus-pocus/hocus-pocus&quot;</span>
@@ -130,21 +131,6 @@ the rest of stylesheets:</p>
 <span class="nc">.headline</span> <span class="p">{</span>
   <span class="o">...</span>
 <span class="p">}</span>
-</code></pre></div>
-<h3>Contributing</h3>
-
-<p><a href="https://github.com/bkzl/hocus-pocus/issues">Add a new issue</a>
-for bugs and ideas.</p>
-
-<h3>Development</h3>
-
-<p>To run docs locally you need to install <code>jekyll</code> and <code>redcarpet</code> gems,
-then run:</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>jekyll serve
-</code></pre></div>
-<p>To build and deploy to production:</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>npm install
-<span class="nv">$ </span>grunt publish
 </code></pre></div>
         </div>
       </div>

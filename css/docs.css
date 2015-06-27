@@ -484,199 +484,9 @@ html {
 body {
   font-size: 0.9375rem;
   line-height: 1.3125rem;
-  font-family: sans-serif;
+  font-family: "Roboto";
   font-weight: 400;
   color: #111; }
-
-.mh {
-  margin: halve(1.3125rem); }
-
-.mth {
-  margin-top: halve(1.3125rem); }
-
-.mrh {
-  margin-right: halve(1.3125rem); }
-
-.mbh {
-  margin-bottom: halve(1.3125rem); }
-
-.mlh {
-  margin-left: halve(1.3125rem); }
-
-.mvh {
-  margin-top: halve(1.3125rem);
-  margin-bottom: halve(1.3125rem); }
-
-.mhh {
-  margin-left: halve(1.3125rem);
-  margin-right: halve(1.3125rem); }
-
-.m0 {
-  margin: 0; }
-
-.mt0 {
-  margin-top: 0; }
-
-.mr0 {
-  margin-right: 0; }
-
-.mb0 {
-  margin-bottom: 0; }
-
-.ml0 {
-  margin-left: 0; }
-
-.mv0 {
-  margin-top: 0;
-  margin-bottom: 0; }
-
-.mh0 {
-  margin-left: 0;
-  margin-right: 0; }
-
-.m {
-  margin: 1.3125rem; }
-
-.mt {
-  margin-top: 1.3125rem; }
-
-.mr {
-  margin-right: 1.3125rem; }
-
-.mb {
-  margin-bottom: 1.3125rem; }
-
-.ml {
-  margin-left: 1.3125rem; }
-
-.mv {
-  margin-top: 1.3125rem;
-  margin-bottom: 1.3125rem; }
-
-.mh {
-  margin-left: 1.3125rem;
-  margin-right: 1.3125rem; }
-
-.md {
-  margin: double(1.3125rem); }
-
-.mtd {
-  margin-top: double(1.3125rem); }
-
-.mrd {
-  margin-right: double(1.3125rem); }
-
-.mbd {
-  margin-bottom: double(1.3125rem); }
-
-.mld {
-  margin-left: double(1.3125rem); }
-
-.mvd {
-  margin-top: double(1.3125rem);
-  margin-bottom: double(1.3125rem); }
-
-.mhd {
-  margin-left: double(1.3125rem);
-  margin-right: double(1.3125rem); }
-
-.ph {
-  padding: halve(1.3125rem); }
-
-.pth {
-  padding-top: halve(1.3125rem); }
-
-.prh {
-  padding-right: halve(1.3125rem); }
-
-.pbh {
-  padding-bottom: halve(1.3125rem); }
-
-.plh {
-  padding-left: halve(1.3125rem); }
-
-.pvh {
-  padding-top: halve(1.3125rem);
-  padding-bottom: halve(1.3125rem); }
-
-.phh {
-  padding-left: halve(1.3125rem);
-  padding-right: halve(1.3125rem); }
-
-.p0 {
-  padding: 0; }
-
-.pt0 {
-  padding-top: 0; }
-
-.pr0 {
-  padding-right: 0; }
-
-.pb0 {
-  padding-bottom: 0; }
-
-.pl0 {
-  padding-left: 0; }
-
-.pv0 {
-  padding-top: 0;
-  padding-bottom: 0; }
-
-.ph0 {
-  padding-left: 0;
-  padding-right: 0; }
-
-.p {
-  padding: 1.3125rem; }
-
-.pt {
-  padding-top: 1.3125rem; }
-
-.pr {
-  padding-right: 1.3125rem; }
-
-.pb {
-  padding-bottom: 1.3125rem; }
-
-.pl {
-  padding-left: 1.3125rem; }
-
-.pv {
-  padding-top: 1.3125rem;
-  padding-bottom: 1.3125rem; }
-
-.ph {
-  padding-left: 1.3125rem;
-  padding-right: 1.3125rem; }
-
-.pd {
-  padding: double(1.3125rem); }
-
-.ptd {
-  padding-top: double(1.3125rem); }
-
-.prd {
-  padding-right: double(1.3125rem); }
-
-.pbd {
-  padding-bottom: double(1.3125rem); }
-
-.pld {
-  padding-left: double(1.3125rem); }
-
-.pvd {
-  padding-top: double(1.3125rem);
-  padding-bottom: double(1.3125rem); }
-
-.phd {
-  padding-left: double(1.3125rem);
-  padding-right: double(1.3125rem); }
-
-hr {
-  height: 1px;
-  border: 0 none;
-  background-color: #ddd;
-  color: #ddd; }
 
 h1,
 .h1 {
@@ -684,7 +494,7 @@ h1,
   line-height: 3.9375rem;
   margin-bottom: 1.3125rem;
   margin-top: 2.625rem;
-  font-family: sans-serif; }
+  font-family: "Roboto"; }
 
 h2,
 .h2 {
@@ -692,7 +502,7 @@ h2,
   line-height: 2.625rem;
   margin-bottom: 1.3125rem;
   margin-top: 2.625rem;
-  font-family: sans-serif; }
+  font-family: "Roboto"; }
 
 h3,
 .h3 {
@@ -700,7 +510,7 @@ h3,
   line-height: 2.625rem;
   margin-bottom: 1.3125rem;
   margin-top: 1.3125rem;
-  font-family: sans-serif; }
+  font-family: "Roboto"; }
 
 h4, h5, h5,
 .h4, .h5, .h6 {
@@ -708,7 +518,7 @@ h4, h5, h5,
   line-height: 1.3125rem;
   margin-bottom: 1.3125rem;
   margin-top: 1.3125rem;
-  font-family: sans-serif; }
+  font-family: "Roboto"; }
 
 strong, em, small, code, hr {
   line-height: 1; }
@@ -741,9 +551,11 @@ blockquote {
   border-left: 3px solid #ddd;
   font-style: italic;
   color: #aaa; }
+  blockquote > *:last-child {
+    margin-bottom: 0; }
 
 code {
-  font-family: monospace;
+  font-family: "Roboto Mono";
   white-space: nowrap; }
 
 pre code {
@@ -768,7 +580,7 @@ small,
   line-height: 0.9375rem; }
 
 .text-mono {
-  font-family: monospace; }
+  font-family: "Roboto Mono"; }
 
 .text-left {
   text-align: left; }
@@ -788,6 +600,12 @@ small,
 .text-bold {
   font-weight: 700; }
 
+hr {
+  height: 1px;
+  border: 0 none;
+  background-color: #ddd;
+  color: #ddd; }
+
 table {
   width: 100%; }
 
@@ -797,9 +615,359 @@ thead {
 td, th {
   padding: 0.32813rem; }
 
+.table-bordered > tr > th,
+.table-bordered > tr > td,
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > td {
+  border: 1px solid #ddd; }
+
+.highlight .hll {
+  background-color: #373b41; }
+
+.highlight {
+  background: #1d1f21;
+  color: #c5c8c6; }
+
+.highlight .c {
+  color: #969896; }
+
+/* Comment */
+.highlight .err {
+  color: #cc6666; }
+
+/* Error */
+.highlight .k {
+  color: #b294bb; }
+
+/* Keyword */
+.highlight .l {
+  color: #de935f; }
+
+/* Literal */
+.highlight .n {
+  color: #c5c8c6; }
+
+/* Name */
+.highlight .o {
+  color: #8abeb7; }
+
+/* Operator */
+.highlight .p {
+  color: #c5c8c6; }
+
+/* Punctuation */
+.highlight .cm {
+  color: #969896; }
+
+/* Comment.Multiline */
+.highlight .cp {
+  color: #969896; }
+
+/* Comment.Preproc */
+.highlight .c1 {
+  color: #969896; }
+
+/* Comment.Single */
+.highlight .cs {
+  color: #969896; }
+
+/* Comment.Special */
+.highlight .gd {
+  color: #cc6666; }
+
+/* Generic.Deleted */
+.highlight .ge {
+  font-style: italic; }
+
+/* Generic.Emph */
+.highlight .gh {
+  color: #c5c8c6;
+  font-weight: bold; }
+
+/* Generic.Heading */
+.highlight .gi {
+  color: #b5bd68; }
+
+/* Generic.Inserted */
+.highlight .gp {
+  color: #969896;
+  font-weight: bold; }
+
+/* Generic.Prompt */
+.highlight .gs {
+  font-weight: bold; }
+
+/* Generic.Strong */
+.highlight .gu {
+  color: #8abeb7;
+  font-weight: bold; }
+
+/* Generic.Subheading */
+.highlight .kc {
+  color: #b294bb; }
+
+/* Keyword.Constant */
+.highlight .kd {
+  color: #b294bb; }
+
+/* Keyword.Declaration */
+.highlight .kn {
+  color: #8abeb7; }
+
+/* Keyword.Namespace */
+.highlight .kp {
+  color: #b294bb; }
+
+/* Keyword.Pseudo */
+.highlight .kr {
+  color: #b294bb; }
+
+/* Keyword.Reserved */
+.highlight .kt {
+  color: #f0c674; }
+
+/* Keyword.Type */
+.highlight .ld {
+  color: #b5bd68; }
+
+/* Literal.Date */
+.highlight .m {
+  color: #de935f; }
+
+/* Literal.Number */
+.highlight .s {
+  color: #b5bd68; }
+
+/* Literal.String */
+.highlight .na {
+  color: #81a2be; }
+
+/* Name.Attribute */
+.highlight .nb {
+  color: #c5c8c6; }
+
+/* Name.Builtin */
+.highlight .nc {
+  color: #f0c674; }
+
+/* Name.Class */
+.highlight .no {
+  color: #cc6666; }
+
+/* Name.Constant */
+.highlight .nd {
+  color: #8abeb7; }
+
+/* Name.Decorator */
+.highlight .ni {
+  color: #c5c8c6; }
+
+/* Name.Entity */
+.highlight .ne {
+  color: #cc6666; }
+
+/* Name.Exception */
+.highlight .nf {
+  color: #81a2be; }
+
+/* Name.Function */
+.highlight .nl {
+  color: #c5c8c6; }
+
+/* Name.Label */
+.highlight .nn {
+  color: #f0c674; }
+
+/* Name.Namespace */
+.highlight .nx {
+  color: #81a2be; }
+
+/* Name.Other */
+.highlight .py {
+  color: #c5c8c6; }
+
+/* Name.Property */
+.highlight .nt {
+  color: #8abeb7; }
+
+/* Name.Tag */
+.highlight .nv {
+  color: #cc6666; }
+
+/* Name.Variable */
+.highlight .ow {
+  color: #8abeb7; }
+
+/* Operator.Word */
+.highlight .w {
+  color: #c5c8c6; }
+
+/* Text.Whitespace */
+.highlight .mf {
+  color: #de935f; }
+
+/* Literal.Number.Float */
+.highlight .mh {
+  color: #de935f; }
+
+/* Literal.Number.Hex */
+.highlight .mi {
+  color: #de935f; }
+
+/* Literal.Number.Integer */
+.highlight .mo {
+  color: #de935f; }
+
+/* Literal.Number.Oct */
+.highlight .sb {
+  color: #b5bd68; }
+
+/* Literal.String.Backtick */
+.highlight .sc {
+  color: #c5c8c6; }
+
+/* Literal.String.Char */
+.highlight .sd {
+  color: #969896; }
+
+/* Literal.String.Doc */
+.highlight .s2 {
+  color: #b5bd68; }
+
+/* Literal.String.Double */
+.highlight .se {
+  color: #de935f; }
+
+/* Literal.String.Escape */
+.highlight .sh {
+  color: #b5bd68; }
+
+/* Literal.String.Heredoc */
+.highlight .si {
+  color: #de935f; }
+
+/* Literal.String.Interpol */
+.highlight .sx {
+  color: #b5bd68; }
+
+/* Literal.String.Other */
+.highlight .sr {
+  color: #b5bd68; }
+
+/* Literal.String.Regex */
+.highlight .s1 {
+  color: #b5bd68; }
+
+/* Literal.String.Single */
+.highlight .ss {
+  color: #b5bd68; }
+
+/* Literal.String.Symbol */
+.highlight .bp {
+  color: #c5c8c6; }
+
+/* Name.Builtin.Pseudo */
+.highlight .vc {
+  color: #cc6666; }
+
+/* Name.Variable.Class */
+.highlight .vg {
+  color: #cc6666; }
+
+/* Name.Variable.Global */
+.highlight .vi {
+  color: #cc6666; }
+
+/* Name.Variable.Instance */
+.highlight .il {
+  color: #de935f; }
+
+/* Literal.Number.Integer.Long */
+.color-block, .grid-preview, p > code, .highlight > pre {
+  font-size: 0.75rem;
+  line-height: 1.0625rem;
+  border-radius: 4px;
+  font-family: "Roboto Mono";
+  background-color: #111;
+  color: #c5c8c6; }
+
+.color-block, .grid-preview {
+  padding: 0.4375rem;
+  margin-bottom: 1.3125rem;
+  color: #fff; }
+
+p > code {
+  padding: 0.16406rem 0.32813rem;
+  margin-left: 0.16406rem;
+  margin-right: 0.16406rem; }
+
+.highlight {
+  background-color: transparent;
+  color: transparent; }
+  .highlight > pre {
+    padding: 0.4375rem; }
+
+.color-block-aqua {
+  background-color: #7fdbff; }
+
+.color-block-blue {
+  background-color: #0074d9; }
+
+.color-block-navy {
+  background-color: #001f3f; }
+
+.color-block-teal {
+  background-color: #39cccc; }
+
+.color-block-green {
+  background-color: #2ecc40; }
+
+.color-block-olive {
+  background-color: #3d9970; }
+
+.color-block-lime {
+  background-color: #01ff70; }
+
+.color-block-yellow {
+  background-color: #ffdc00; }
+
+.color-block-orange {
+  background-color: #ff851b; }
+
+.color-block-red {
+  background-color: #ff4136; }
+
+.color-block-fuchsia {
+  background-color: #f012be; }
+
+.color-block-purple {
+  background-color: #b10dc9; }
+
+.color-block-maroon {
+  background-color: #85144b; }
+
+.color-block-white {
+  background-color: #fff;
+  color: #111; }
+
+.color-block-silver {
+  background-color: #ddd; }
+
+.color-block-gray {
+  background-color: #aaa; }
+
+.color-block-black {
+  background-color: #111; }
+
 .grid-preview {
-  background: #0074d9;
-  color: white;
+  background-color: #0074d9;
+  color: #fff;
   text-align: center; }
   .grid-preview .grid-preview {
-    background: #7fdbff; }
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: #7fdbff; }
+
+.grid-preview-large {
+  padding-top: 2.625rem;
+  padding-bottom: 2.625rem; }
