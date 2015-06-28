@@ -10,15 +10,30 @@
   </head>
 
   <body>
+    <div class="navbar">
+      <div class="container navbar-container">
+        <div class="grid grid-pair">
+          <div class="grid-item 1/2">
+            Hocus-Pocus
+          </div>
+          <div class="grid-item 1/2">
+            <ul class="navbar-menu">
+              <li><a href="https://github.com/bkzl/hocus-pocus">View the GitHub project</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
-      <h2><a href="/">Hocus-Pocus</a></h2>
       <div class="grid">
         <div class="grid-item 1/5">
-          <ul>
+          <ul class="list-menu">
             <li><a href="/">Quick Start</a></li>
             <li><a href="/global">Global</a></li>
             <li><a href="/layout">Layout</a></li>
             <li><a href="/type">Type</a></li>
+            <li><a href="/navbar">Navbar</a></li>
             <li><a href="/tables">Tables</a></li>
           </ul>
         </div>
@@ -51,11 +66,14 @@ micro framework, ideal as a CSS starter kit.</p>
 </code></pre></div>
 <p>Then include the main Hocus-Pocus file after your variables, but before
 the rest of your stylesheets:</p>
-<div class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="na">$font-family-base</span><span class="o">:</span> <span class="s2">&quot;Open Sans&quot;</span><span class="o">,</span> <span class="no">sans-serif</span>
+<div class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="c1">// Your variables</span>
+<span class="na">$font-family-base</span><span class="o">:</span> <span class="s2">&quot;Open Sans&quot;</span><span class="o">,</span> <span class="no">sans-serif</span>
 <span class="na">$grid-container</span><span class="o">:</span> <span class="mi">70</span><span class="kt">rem</span>
 
+<span class="c1">// Hocus-Pocus include</span>
 <span class="k">@import</span> <span class="s">&quot;bower_components/hocus-pocus/hocus-pocus&quot;</span>
 
+<span class="c1">// Your stylesheets</span>
 <span class="k">@import</span> <span class="s">&quot;objects/meter&quot;</span>
 <span class="k">@import</span> <span class="s">&quot;objects/price-box&quot;</span>
 <span class="k">@import</span> <span class="s">&quot;inbox/landing-headings-fix&quot;</span>
