@@ -989,12 +989,17 @@ dd + dt {
   .list-menu > li > a {
     display: block;
     padding: 0.32813rem;
+    padding-top: 0.27563rem;
+    padding-bottom: 0.11813rem;
     border-radius: 4px;
     text-decoration: none; }
     .navbar-menu > li > a:hover,
     .list-menu > li > a:hover {
       color: #fff;
       background: #0074d9; }
+    .navbar-menu > li > a:active,
+    .list-menu > li > a:active {
+      top: 0px; }
 
 hr {
   height: 1px;
