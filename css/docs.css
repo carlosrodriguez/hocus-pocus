@@ -836,12 +836,14 @@ ul ul, ol ol, ul ol, ol ul {
   margin-bottom: 0; }
 
 html {
+  position: relative;
   overflow-y: scroll;
   min-height: 100%; }
 
 body {
   font-size: 0.9375rem;
   line-height: 1.3125rem;
+  margin-bottom: 3.9375rem;
   font-family: "Roboto";
   font-weight: 400;
   color: #111; }
@@ -1034,6 +1036,15 @@ hr {
       -ms-flex-direction: column;
           flex-direction: column; }
 
+.sticky-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3.9375rem;
+  width: 100%;
+  padding-top: 1.3125rem;
+  padding-bottom: 1.3125rem; }
+
 table {
   width: 100%; }
 
@@ -1048,6 +1059,82 @@ td, th {
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > td {
   border: 1px solid #ddd; }
+
+.color-block, .grid-preview, p > code, .highlight > pre {
+  font-size: 0.75rem;
+  line-height: 1.0625rem;
+  font-family: "Roboto Mono";
+  background-color: #111;
+  color: #c5c8c6; }
+
+.color-block, .grid-preview {
+  border-radius: 4px;
+  padding: 0.4375rem;
+  margin-bottom: 1.3125rem;
+  color: #fff; }
+
+p > code {
+  padding: 0.16406rem 0.32813rem;
+  margin-left: 0.16406rem;
+  margin-right: 0.16406rem; }
+
+.highlight {
+  background-color: transparent;
+  color: transparent; }
+  .highlight > pre {
+    padding: 0.4375rem; }
+
+.color-block-aqua {
+  background-color: #7fdbff; }
+
+.color-block-blue {
+  background-color: #0074d9; }
+
+.color-block-navy {
+  background-color: #001f3f; }
+
+.color-block-teal {
+  background-color: #39cccc; }
+
+.color-block-green {
+  background-color: #2ecc40; }
+
+.color-block-olive {
+  background-color: #3d9970; }
+
+.color-block-lime {
+  background-color: #01ff70; }
+
+.color-block-yellow {
+  background-color: #ffdc00; }
+
+.color-block-orange {
+  background-color: #ff851b; }
+
+.color-block-red {
+  background-color: #ff4136; }
+
+.color-block-fuchsia {
+  background-color: #f012be; }
+
+.color-block-purple {
+  background-color: #b10dc9; }
+
+.color-block-maroon {
+  background-color: #85144b; }
+
+.color-block-white {
+  background-color: #fff;
+  color: #111; }
+
+.color-block-silver {
+  background-color: #ddd; }
+
+.color-block-gray {
+  background-color: #aaa; }
+
+.color-block-black {
+  background-color: #111; }
 
 .highlight .hll {
   background-color: #373b41; }
@@ -1311,81 +1398,19 @@ td, th {
   color: #de935f; }
 
 /* Literal.Number.Integer.Long */
-.color-block, .grid-preview, p > code, .highlight > pre {
-  font-size: 0.75rem;
-  line-height: 1.0625rem;
-  font-family: "Roboto Mono";
-  background-color: #111;
-  color: #c5c8c6; }
+.example {
+  border: 1px solid #ddd;
+  border-bottom: 0;
+  padding: 1.3125rem; }
+  .example > *:last-child {
+    margin-top: 0;
+    margin-bottom: 0; }
+  .example + .highlight {
+    margin-bottom: 2.625rem; }
 
-.color-block, .grid-preview {
-  border-radius: 4px;
-  padding: 0.4375rem;
-  margin-bottom: 1.3125rem;
-  color: #fff; }
-
-p > code {
-  padding: 0.16406rem 0.32813rem;
-  margin-left: 0.16406rem;
-  margin-right: 0.16406rem; }
-
-.highlight {
-  background-color: transparent;
-  color: transparent; }
-  .highlight > pre {
-    padding: 0.4375rem; }
-
-.color-block-aqua {
-  background-color: #7fdbff; }
-
-.color-block-blue {
-  background-color: #0074d9; }
-
-.color-block-navy {
-  background-color: #001f3f; }
-
-.color-block-teal {
-  background-color: #39cccc; }
-
-.color-block-green {
-  background-color: #2ecc40; }
-
-.color-block-olive {
-  background-color: #3d9970; }
-
-.color-block-lime {
-  background-color: #01ff70; }
-
-.color-block-yellow {
-  background-color: #ffdc00; }
-
-.color-block-orange {
-  background-color: #ff851b; }
-
-.color-block-red {
-  background-color: #ff4136; }
-
-.color-block-fuchsia {
-  background-color: #f012be; }
-
-.color-block-purple {
-  background-color: #b10dc9; }
-
-.color-block-maroon {
-  background-color: #85144b; }
-
-.color-block-white {
-  background-color: #fff;
-  color: #111; }
-
-.color-block-silver {
-  background-color: #ddd; }
-
-.color-block-gray {
-  background-color: #aaa; }
-
-.color-block-black {
-  background-color: #111; }
+.footer {
+  color: #aaa;
+  border-top: 1px solid #ddd; }
 
 .grid-preview {
   background-color: #0074d9;
@@ -1403,13 +1428,3 @@ p > code {
 .grid-preview-large {
   padding-top: 2.625rem;
   padding-bottom: 2.625rem; }
-
-.example {
-  border: 1px solid #ddd;
-  border-bottom: 0;
-  padding: 1.3125rem; }
-  .example > *:last-child {
-    margin-top: 0;
-    margin-bottom: 0; }
-  .example + .highlight {
-    margin-bottom: 2.625rem; }
