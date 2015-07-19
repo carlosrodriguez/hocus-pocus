@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Hocus-Pocus</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="http://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:100,400,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/css/docs.css">
   </head>
@@ -14,7 +14,7 @@
       <div class="container navbar-container">
         <div class="grid grid-pair">
           <div class="grid-item 1/2">
-            Hocus-Pocus
+            <div class="brand">Hocus-Pocus</div>
           </div>
           <div class="grid-item 1/2">
             <ul class="navbar-menu">
@@ -35,6 +35,7 @@
             <li><a href="/navbar">Navbar</a></li>
             <li><a href="/sticky-footer">Sticky Footer</a></li>
             <li><a href="/type">Type</a></li>
+            <li><a href="/images">Images</a></li>
             <li><a href="/tables">Tables</a></li>
           </ul>
         </div>
@@ -352,6 +353,21 @@ helper with value equal to 0 and seven helpers in eight sizes:</p>
 <span class="nc">.padding-half-top</span>
   <span class="na">padding-top</span><span class="o">:</span> <span class="nf">halve</span><span class="p">(</span><span class="nv">$spacing-unit</span><span class="p">)</span>
 </code></pre></div>
+<h3>Layout helpers</h3>
+
+<p><code>.hidden</code> which makes element hidden.</p>
+
+<div class="example">
+  <div class="clearfix">
+    <div class="float-left">.float-left</div>
+    <div class="float-right">.float-right</div>
+  </div>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;clearfix&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;float-left&quot;</span><span class="nt">&gt;</span>.float-left<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;float-right&quot;</span><span class="nt">&gt;</span>.float-right<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
         </div>
       </div>
     </div>
@@ -364,7 +380,7 @@ helper with value equal to 0 and seven helpers in eight sizes:</p>
             under the <a href="https://github.com/bkzl/hocus-pocus/blob/master/LICENSE">MIT license</a>.
           </div>
           <div class="grid-item 1/2">
-            Latest release: <a href="https://github.com/bkzl/hocus-pocus/tree/v0.0.8">v0.0.8</a>
+            Latest release: <a href="https://github.com/bkzl/hocus-pocus/tree/v0.0.9">v0.0.9</a>
           </div>
         </div>
       </div>

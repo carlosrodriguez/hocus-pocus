@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Hocus-Pocus</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="http://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:100,400,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/css/docs.css">
   </head>
@@ -14,7 +14,7 @@
       <div class="container navbar-container">
         <div class="grid grid-pair">
           <div class="grid-item 1/2">
-            Hocus-Pocus
+            <div class="brand">Hocus-Pocus</div>
           </div>
           <div class="grid-item 1/2">
             <ul class="navbar-menu">
@@ -35,6 +35,7 @@
             <li><a href="/navbar">Navbar</a></li>
             <li><a href="/sticky-footer">Sticky Footer</a></li>
             <li><a href="/type">Type</a></li>
+            <li><a href="/images">Images</a></li>
             <li><a href="/tables">Tables</a></li>
           </ul>
         </div>
@@ -44,59 +45,80 @@
 <p>Base font is described by following variables: <code>$font-size-base</code>,
 <code>$font-family-base</code>, <code>$font-weight-normal</code> and <code>$color-font</code>.</p>
 
+<p>The <code>+font-size</code> mixin allows to set the element&#39;s font size
+and keep the proper vertical rhythm:</p>
+<div class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nt">div</span>
+  <span class="k">@include</span><span class="nd"> font-size</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c1">// div</span>
+<span class="c1">//   font-size: 0.75rem;</span>
+<span class="c1">//   line-height: 1.0625rem;</span>
+</code></pre></div>
 <h3>Headings</h3>
 
 <div class="example">
   <h1>Heading Level 1</h1>
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1&gt;</span>Heading Level 1<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;h1&quot;</span><span class="nt">&gt;</span>Heading Level 1<span class="nt">&lt;/span&gt;</span>
 </code></pre></div>
 <div class="example">
   <h2>Heading Level 2</h2>
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h2&gt;</span>Heading Level 2<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;h2&quot;</span><span class="nt">&gt;</span>Heading Level 2<span class="nt">&lt;/span&gt;</span>
 </code></pre></div>
 <div class="example">
   <h3>Heading Level 3</h3>
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h3&gt;</span>Heading Level 3<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;h3&quot;</span><span class="nt">&gt;</span>Heading Level 3<span class="nt">&lt;/span&gt;</span>
 </code></pre></div>
 <div class="example">
   <h4>Heading Level 4</h4>
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h4&gt;</span>Heading Level 4<span class="nt">&lt;/h4&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;h4&quot;</span><span class="nt">&gt;</span>Heading Level 4<span class="nt">&lt;/span&gt;</span>
 </code></pre></div>
 <div class="example">
   <h5>Heading Level 5</h5>
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h5&gt;</span>Heading Level 5<span class="nt">&lt;/h5&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;h5&quot;</span><span class="nt">&gt;</span>Heading Level 5<span class="nt">&lt;/span&gt;</span>
 </code></pre></div>
 <div class="example">
   <h6>Heading Level 6</h6>
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h6&gt;</span>Heading Level 6<span class="nt">&lt;/h6&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;h6&quot;</span><span class="nt">&gt;</span>Heading Level 6<span class="nt">&lt;/span&gt;</span>
 </code></pre></div>
 <h3>Paragraphs</h3>
 
-<p>Default styles for <code>&lt;p&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;sup&gt;</code>, <code>&lt;sub&gt;</code>, <code>&lt;small&gt;</code>
-and <code>&lt;a&gt;</code>.</p>
+<p>Default styles for <code>&lt;p&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;sup&gt;</code>, <code>&lt;sub&gt;</code>, <code>&lt;small&gt;</code>,
+<code>&lt;a&gt;</code>, <code>&lt;mark&gt;</code>, <code>&lt;del&gt;</code>, <code>&lt;ins&gt;</code>, <code>&lt;s&gt;</code> and <code>&lt;u&gt;</code>.</p>
 
 <div class="example">
-  <p>
-    <strong>Pellentesque habitant morbi tristique</strong> senectus et netus
-    et malesuada fames <sub>ac turpis</sub> egestas. <em>Vestibulum tortor
-    quam</em>, feugiat vitae, ultricies eget, <small>tempor sit amet,
-    ante</small>. Donec eu libero <sup>sit amet</sup> quam egestas semper.
-    <a href="#">Aenean ultricies</a> mi vitae est.
-  </p>
+  <p>Paragraph with a <strong>strong</strong> element.</p>
+  <p>Paragraph with an <em>emphasis</em> element.</p>
+  <p>Paragraph with a <sup>sup</sup> element.</p>
+  <p>Paragraph with a <sub>sub</sub> element.</p>
+  <p>Paragraph with a <small>small</small> element.</p>
+  <p>Paragraph with a <a href="#">link</a>.</p>
+  <p>Paragraph with a <mark>mark</mark> element.</p>
+  <p>Paragraph with a <del>deleted text</del> and an <ins>inserted text</ins> elements.</p>
+  <p>Paragraph with a <s>strikethrough</s> element.</p>
+  <p>Paragraph with an <u>underline</u> element.</p>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>
-  <span class="nt">&lt;strong&gt;</span>Pellentesque habitant morbi tristique<span class="nt">&lt;/strong&gt;</span> senectus et netus
-  et malesuada fames <span class="nt">&lt;sub&gt;</span>ac turpis<span class="nt">&lt;/sub&gt;</span> egestas. <span class="nt">&lt;em&gt;</span>Vestibulum tortor
-  quam<span class="nt">&lt;/em&gt;</span>, feugiat vitae, ultricies eget, <span class="nt">&lt;small&gt;</span>tempor sit amet,
-  ante<span class="nt">&lt;/small&gt;</span>. Donec eu libero <span class="nt">&lt;sup&gt;</span>sit amet<span class="nt">&lt;/sup&gt;</span> quam egestas semper.
-  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Aenean ultricies<span class="nt">&lt;/a&gt;</span> mi vitae est.
-<span class="nt">&lt;/p&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>Paragraph with a <span class="nt">&lt;strong&gt;</span>strong<span class="nt">&lt;/strong&gt;</span> element.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Paragraph with an <span class="nt">&lt;em&gt;</span>emphasis<span class="nt">&lt;/em&gt;</span> element.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Paragraph with a <span class="nt">&lt;sup&gt;</span>sup<span class="nt">&lt;/sup&gt;</span> element.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Paragraph with a <span class="nt">&lt;sub&gt;</span>sub<span class="nt">&lt;/sub&gt;</span> element.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Paragraph with a <span class="nt">&lt;small&gt;</span>small<span class="nt">&lt;/small&gt;</span> element.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Paragraph with a <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>link<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Paragraph with a <span class="nt">&lt;mark&gt;</span>mark<span class="nt">&lt;/mark&gt;</span> element.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Paragraph with a <span class="nt">&lt;del&gt;</span>deleted text<span class="nt">&lt;/del&gt;</span> and an <span class="nt">&lt;ins&gt;</span>inserted text<span class="nt">&lt;/ins&gt;</span> elements.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Paragraph with a <span class="nt">&lt;s&gt;</span>strikethrough<span class="nt">&lt;/s&gt;</span> element.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Paragraph with an <span class="nt">&lt;u&gt;</span>underline<span class="nt">&lt;/u&gt;</span> element.<span class="nt">&lt;/p&gt;</span>
 </code></pre></div>
 <h3>Blockquote</h3>
 
@@ -225,13 +247,12 @@ and <code>&lt;a&gt;</code>.</p>
 
 <div class="example">
   <p class="text-micro">Micro text</p>
+  <p class="text-small">Small text</p>
+  <p class="text-lead">Lead text</p>
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-micro&quot;</span><span class="nt">&gt;</span>Micro text<span class="nt">&lt;/p&gt;</span>
-</code></pre></div>
-<div class="example">
-  <p class="text-small">Small text</p>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-small&quot;</span><span class="nt">&gt;</span>Small text<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-small&quot;</span><span class="nt">&gt;</span>Small text<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-lead&quot;</span><span class="nt">&gt;</span>Lead text<span class="nt">&lt;/p&gt;</span>
 </code></pre></div>
 <div class="example">
   <p class="text-mono">Mono text</p>
@@ -240,33 +261,39 @@ and <code>&lt;a&gt;</code>.</p>
 </code></pre></div>
 <div class="example">
   <p class="text-light">Light weight text</p>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-light&quot;</span><span class="nt">&gt;</span>Light weight text<span class="nt">&lt;/p&gt;</span>
-</code></pre></div>
-<div class="example">
   <p class="text-normal">Normal weight text</p>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-normal&quot;</span><span class="nt">&gt;</span>Normal weight text<span class="nt">&lt;/p&gt;</span>
-</code></pre></div>
-<div class="example">
   <p class="text-bold">Bold weight text</p>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-bold&quot;</span><span class="nt">&gt;</span>Bold weight text<span class="nt">&lt;/p&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-light&quot;</span><span class="nt">&gt;</span>Light weight text<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-normal&quot;</span><span class="nt">&gt;</span>Normal weight text<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-bold&quot;</span><span class="nt">&gt;</span>Bold weight text<span class="nt">&lt;/p&gt;</span>
+</code></pre></div>
+<div class="example">
+  <p class="text-lowercase">Lowercased text</p>
+  <p class="text-uppercase">Uppercased text</p>
+  <p class="text-capitalize">Capitalized text</p>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-lowercase&quot;</span><span class="nt">&gt;</span>Lowercase text<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-uppercase&quot;</span><span class="nt">&gt;</span>Uppercase text<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-capitalize&quot;</span><span class="nt">&gt;</span>Capitalize text<span class="nt">&lt;/p&gt;</span>
 </code></pre></div>
 <div class="example">
   <p class="text-left">Left aligned text</p>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-left&quot;</span><span class="nt">&gt;</span>Left aligned text<span class="nt">&lt;/p&gt;</span>
-</code></pre></div>
-<div class="example">
   <p class="text-center">Center aligned text</p>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-center&quot;</span><span class="nt">&gt;</span>Center aligned text<span class="nt">&lt;/p&gt;</span>
-</code></pre></div>
-<div class="example">
   <p class="text-right">Right aligned text</p>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-right&quot;</span><span class="nt">&gt;</span>Right aligned text<span class="nt">&lt;/p&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-left&quot;</span><span class="nt">&gt;</span>Left aligned text<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-center&quot;</span><span class="nt">&gt;</span>Center aligned text<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-right&quot;</span><span class="nt">&gt;</span>Right aligned text<span class="nt">&lt;/p&gt;</span>
+</code></pre></div>
+<div class="example">
+  <p class="text-positive">Positive text</p>
+  <p class="text-negative">Negative text</p>
+  <p class="text-informative">Informative text</p>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-positive&quot;</span><span class="nt">&gt;</span>Positive text<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-negative&quot;</span><span class="nt">&gt;</span>Negative text<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-informative&quot;</span><span class="nt">&gt;</span>Informative text<span class="nt">&lt;/p&gt;</span>
 </code></pre></div>
         </div>
       </div>
@@ -280,7 +307,7 @@ and <code>&lt;a&gt;</code>.</p>
             under the <a href="https://github.com/bkzl/hocus-pocus/blob/master/LICENSE">MIT license</a>.
           </div>
           <div class="grid-item 1/2">
-            Latest release: <a href="https://github.com/bkzl/hocus-pocus/tree/v0.0.8">v0.0.8</a>
+            Latest release: <a href="https://github.com/bkzl/hocus-pocus/tree/v0.0.9">v0.0.9</a>
           </div>
         </div>
       </div>
