@@ -43,11 +43,18 @@
           </ul>
         </div>
         <div class="grid-item 4/5">
-          <p>Footer which is pinned to the bottom of the viewport, like on this page.
-Set the height by modifying <code>$sticky-footer-height</code>.</p>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">&quot;sticky-footer&quot;</span><span class="nt">&gt;</span>
+          <p>Use <code>.box</code> to create an element out of your content. It has default
+padding background equal the value of <code>$color-box</code> and removes bottom
+margin from a last element inside it.</p>
+
+<div class="example">
+  <div class="box">
+    <p>Element inside a box.</p>
+  </div>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box&quot;</span><span class="nt">&gt;</span>
   ...
-<span class="nt">&lt;/footer&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
         </div>
       </div>
