@@ -64,11 +64,11 @@
           </div>
 
           <p>First you can define preffered way of writting RWD by setting the
-<code>$responsive-type</code> variable with <code>min</code> or <code>max</code> keyword. Then, you should
+<code>$responsive-type</code> variable with <code>mobile-first</code> or <code>desktop-first</code> keyword. Then, you should
 define brakepoints in <code>$responsive-map</code> variable. There are two types of
 them: with single and double arguments. For each breakpoint will be
 generated visibility helpers and grid i.e.</p>
-<div class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="na">$responsive-type</span><span class="o">:</span> <span class="n">max</span>
+<div class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="na">$responsive-type</span><span class="o">:</span> <span class="n">desktop-first</span>
 <span class="na">$responsive-map</span><span class="o">:</span> <span class="p">(</span><span class="n">mobile</span><span class="o">:</span> <span class="mi">680</span><span class="kt">px</span><span class="p">)</span>
 </code></pre></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;mobile-hidden&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;hidden mobile-visible&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>

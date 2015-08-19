@@ -859,7 +859,7 @@ img {
   .mobile-visible-inline {
     display: inline; }
 
-  [class~="mobile-1/1-mobile"] {
+  [class~="mobile-1/1"] {
     width: 100%;
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
@@ -1424,7 +1424,7 @@ button[disabled],
   margin-bottom: 2.625rem;
   padding-top: 0.65625rem;
   padding-bottom: 0.65625rem;
-  background: #111;
+  background: #000;
   color: #fff; }
 
 .navbar-menu {
@@ -1458,11 +1458,12 @@ button[disabled],
 
 .brand {
   background-repeat: no-repeat;
-  background-image: url("/images/brand.svg");
-  width: 92px;
-  height: 37px;
+  background-image: url("/images/brand-dark.png");
+  width: 144px;
+  height: 72px;
   text-indent: -9999px;
-  white-space: nowrap; }
+  white-space: nowrap;
+  background-size: 144px 72px; }
 
 .color-block, .grid-preview, p > code, .highlight > pre {
   font-size: 0.75rem;
