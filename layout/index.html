@@ -17,7 +17,7 @@
             <div class="brand">Hocus-Pocus</div>
           </div>
           <div class="grid-item 1/2">
-            <ul class="navbar-menu">
+            <ul class="navbar-menu mobile-hidden">
               <li><a href="https://github.com/bkzl/hocus-pocus">View the GitHub project</a></li>
             </ul>
           </div>
@@ -27,22 +27,42 @@
 
     <div class="container padding-double-bottom">
       <div class="grid">
-        <div class="grid-item 1/5">
+        <div class="grid-item 1/5 mobile-hidden">
           <ul class="list-menu">
             <li><a href="/">Quick Start</a></li>
-            <li><a href="/global">Global</a></li>
-            <li><a href="/layout">Layout</a></li>
-            <li><a href="/type">Type</a></li>
-            <li><a href="/images">Images</a></li>
-            <li><a href="/tables">Tables</a></li>
-            <li><a href="/buttons">Buttons</a></li>
-            <li><a href="/flashes">Flashes</a></li>
-            <li><a href="/box">Box</a></li>
-            <li><a href="/navbar">Navbar</a></li>
-            <li><a href="/sticky-footer">Sticky Footer</a></li>
+<li><a href="/global">Global</a></li>
+<li><a href="/layout">Layout</a></li>
+<li><a href="/responsive">Responsive</a></li>
+<li><a href="/type">Type</a></li>
+<li><a href="/images">Images</a></li>
+<li><a href="/tables">Tables</a></li>
+<li><a href="/forms">Forms</a></li>
+<li><a href="/buttons">Buttons</a></li>
+<li><a href="/navbar">Navbar</a></li>
+<li><a href="/sticky-footer">Sticky Footer</a></li>
+<li><a href="/extras">Extras</a></li>
+
           </ul>
         </div>
-        <div class="grid-item 4/5">
+        <div class="grid-item 4/5 mobile-1/1">
+          <div class="hidden mobile-visible margin-double-bottom">
+            <ul class="list-inline">
+              <li><a href="/">Quick Start</a></li>
+<li><a href="/global">Global</a></li>
+<li><a href="/layout">Layout</a></li>
+<li><a href="/responsive">Responsive</a></li>
+<li><a href="/type">Type</a></li>
+<li><a href="/images">Images</a></li>
+<li><a href="/tables">Tables</a></li>
+<li><a href="/forms">Forms</a></li>
+<li><a href="/buttons">Buttons</a></li>
+<li><a href="/navbar">Navbar</a></li>
+<li><a href="/sticky-footer">Sticky Footer</a></li>
+<li><a href="/extras">Extras</a></li>
+
+            </ul>
+          </div>
+
           <p>Use <code>.container</code> class to create a centered wrapper which has width of
 <code>$grid-container</code>.</p>
 
@@ -356,9 +376,11 @@ helper with value equal to 0 and seven helpers in eight sizes:</p>
 <span class="nc">.padding-half-top</span>
   <span class="na">padding-top</span><span class="o">:</span> <span class="nf">halve</span><span class="p">(</span><span class="nv">$spacing-unit</span><span class="p">)</span>
 </code></pre></div>
-<h3>Layout helpers</h3>
+<h3>Visibility helpers</h3>
 
-<p><code>.hidden</code> which makes element hidden.</p>
+<p><code>.hidden</code>, <code>.visible</code>, <code>.visible-block</code>, <code>.visible-inline-block</code>, <code>.visible-inline</code></p>
+
+<h3>Layout helpers</h3>
 
 <div class="example">
   <div class="clearfix">
@@ -371,6 +393,33 @@ helper with value equal to 0 and seven helpers in eight sizes:</p>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;float-right&quot;</span><span class="nt">&gt;</span>.float-right<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
+<h3>Box</h3>
+
+<p>Use <code>.box</code> to create an element out of your content. It has the default
+padding and the last element inside it has no bottom margin.</p>
+
+<div class="example">
+  <div class="box" style="background-color: #eee;">
+    <p>Element inside a box</p>
+  </div>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box&quot;</span> <span class="na">style=</span><span class="s">&quot;background-color: #eee;&quot;</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<h3>Flash</h3>
+
+<p>Flash is very similar to box, but has a smaller padding.</p>
+
+<div class="example">
+  <div class="flash" style="background-color: #eee;">
+    <p>Flash</p>
+  </div>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;flash&quot;</span> <span class="na">style=</span><span class="s">&quot;background-color: #eee;&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Flash<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
         </div>
       </div>
     </div>
@@ -379,11 +428,13 @@ helper with value equal to 0 and seven helpers in eight sizes:</p>
       <div class="container">
         <div class="grid grid-pair">
           <div class="grid-item 1/2">
-            Maintained by <a href="http://bkzl.github.io">bkzl</a>
-            under the <a href="https://github.com/bkzl/hocus-pocus/blob/master/LICENSE">MIT license</a>.
+            <div class="mobile-hidden">
+              Maintained by <a href="http://bkzl.github.io">bkzl</a>
+              under the <a href="https://github.com/bkzl/hocus-pocus/blob/master/LICENSE">MIT license</a>.
+            </div>
           </div>
           <div class="grid-item 1/2">
-            Latest release: <a href="https://github.com/bkzl/hocus-pocus/tree/v0.0.10">v0.0.10</a>
+            Latest release: <a href="https://github.com/bkzl/hocus-pocus/tree/v0.0.11">v0.0.11</a>
           </div>
         </div>
       </div>
