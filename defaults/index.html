@@ -29,9 +29,10 @@
       <div class="grid">
         <div class="grid-item 1/5 mobile-hidden">
           <ul class="list-menu">
-            <li><a href="/">Quick Start</a></li>
-<li><a href="/global">Global</a></li>
-<li><a href="/layout">Layout</a></li>
+            <li><a href="/">Home</a></li>
+<li><a href="/quick-start">Quick Start</a></li>
+<li><a href="/defaults">Defaults</a></li>
+<li><a href="/layout">Grid & Layout</a></li>
 <li><a href="/responsive">Responsive</a></li>
 <li><a href="/type">Type</a></li>
 <li><a href="/images">Images</a></li>
@@ -47,9 +48,10 @@
         <div class="grid-item 4/5 mobile-1/1">
           <div class="hidden mobile-visible margin-double-bottom">
             <ul class="list-inline">
-              <li><a href="/">Quick Start</a></li>
-<li><a href="/global">Global</a></li>
-<li><a href="/layout">Layout</a></li>
+              <li><a href="/">Home</a></li>
+<li><a href="/quick-start">Quick Start</a></li>
+<li><a href="/defaults">Defaults</a></li>
+<li><a href="/layout">Grid & Layout</a></li>
 <li><a href="/responsive">Responsive</a></li>
 <li><a href="/type">Type</a></li>
 <li><a href="/images">Images</a></li>
@@ -63,16 +65,8 @@
             </ul>
           </div>
 
-          <p><a href="https://github.com/necolas/normalize.css">Normalize</a> is included.</p>
-
-<p>Box-sizing is changed for all elements (excluding <code>&lt;img&gt;</code>) and set to <code>border-box</code>.</p>
-
-<p>Vertical scrollbar is always visible.</p>
-
-<h3>Defaults</h3>
-
-<p>To see the all available defaults please check the <code>sass/_defaults.sass</code>
-file. Variables listed below are recommended to set on your part.</p>
+          <p>I prefer to adjust settings listed below per each project. List of all
+variables is available under <code>sass/_defaults.sass</code>.</p>
 <div class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="na">$color-ui</span><span class="o">:</span> <span class="nv">$color-silver</span>
 <span class="na">$color-btn</span><span class="o">:</span> <span class="nv">$color-black</span>
 <span class="na">$color-box</span><span class="o">:</span> <span class="nv">$color-silver</span>
@@ -135,32 +129,26 @@ file. Variables listed below are recommended to set on your part.</p>
   <div class="grid-item 1/6"><div class="color-block color-block-black">$color-black</div></div>
 </div>
 
-<h3>Functions</h3>
+<h3>Size functions</h3>
 
-<p>Sizing functions return a quotient/product of the provided value.</p>
+<p>Size functions return a quotient/product of the provided value.</p>
 <div class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nt">div</span>
-  <span class="na">padding</span><span class="o">:</span> <span class="nf">quarter</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span>
-  <span class="c1">// padding: 3px</span>
+  <span class="na">padding</span><span class="o">:</span> <span class="nf">quarter</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span> <span class="c1">// padding: 3px</span>
 
 <span class="nt">div</span>
-  <span class="na">padding</span><span class="o">:</span> <span class="nf">third</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span>
-  <span class="c1">// padding: 4px</span>
+  <span class="na">padding</span><span class="o">:</span> <span class="nf">third</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span> <span class="c1">// padding: 4px</span>
 
 <span class="nt">div</span>
-  <span class="na">padding</span><span class="o">:</span> <span class="nf">halve</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span>
-  <span class="c1">// padding: 6px</span>
+  <span class="na">padding</span><span class="o">:</span> <span class="nf">halve</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span> <span class="c1">// padding: 6px</span>
 
 <span class="nt">div</span>
-  <span class="na">padding</span><span class="o">:</span> <span class="nf">double</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span>
-  <span class="c1">// padding: 24px</span>
+  <span class="na">padding</span><span class="o">:</span> <span class="nf">double</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span> <span class="c1">// padding: 24px</span>
 
 <span class="nt">div</span>
-  <span class="na">padding</span><span class="o">:</span> <span class="nf">triple</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span>
-  <span class="c1">// padding: 36px</span>
+  <span class="na">padding</span><span class="o">:</span> <span class="nf">triple</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span> <span class="c1">// padding: 36px</span>
 
 <span class="nt">div</span>
-  <span class="na">padding</span><span class="o">:</span> <span class="nf">quadruple</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span>
-  <span class="c1">// padding: 48px</span>
+  <span class="na">padding</span><span class="o">:</span> <span class="nf">quadruple</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span> <span class="c1">// padding: 48px</span>
 </code></pre></div>
         </div>
       </div>
@@ -176,10 +164,25 @@ file. Variables listed below are recommended to set on your part.</p>
             </div>
           </div>
           <div class="grid-item 1/2">
-            Latest release: <a href="https://github.com/bkzl/hocus-pocus/tree/v0.0.11">v0.0.11</a>
+            Latest release: <a href="https://github.com/bkzl/hocus-pocus/tree/v0.1.0">v0.1.0</a>
           </div>
         </div>
       </div>
     </footer>
+
+    <script type="text/javascript">
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '55fc172892c6ac504901654a');
+        t.setAttribute('data-track-path', 'http://track.gaug.es/track.gif');
+        t.src = 'https://track.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script>
   </body>
 </html>

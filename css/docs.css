@@ -1059,6 +1059,36 @@ img {
     -webkit-flex-basis: 91.6666%;
         -ms-flex-preferred-size: 91.6666%;
             flex-basis: 91.6666%; } }
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, dl, dd, hr,
+blockquote, pre, table, th, td,
+form, fieldset, caption, legend {
+  margin: 0;
+  padding: 0; }
+
+p, ul, ol, dl, hr,
+blockquote, pre, table {
+  margin-bottom: 1.3125rem; }
+
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+html {
+  position: relative;
+  overflow-y: scroll;
+  min-height: 100%; }
+
+body {
+  margin-bottom: 3.9375rem;
+  font-family: "Roboto";
+  font-weight: 400;
+  color: #111; }
+
+body {
+  font-size: 0.9375rem;
+  line-height: 1.3125rem; }
+
 h1,
 .h1 {
   font-size: 3.1875rem;
@@ -1185,35 +1215,8 @@ small,
 .text-informative {
   color: #0074d9; }
 
-h1, h2, h3, h4, h5, h6,
-p, ul, ol, dl, dd, hr,
-blockquote, pre, table, th, td,
-form, fieldset, caption, legend {
-  margin: 0;
-  padding: 0; }
-
-p, ul, ol, dl, hr,
-blockquote, pre, table {
-  margin-bottom: 1.3125rem; }
-
-ul ul, ol ol, ul ol, ol ul {
-  margin-top: 0;
-  margin-bottom: 0; }
-
-html {
-  position: relative;
-  overflow-y: scroll;
-  min-height: 100%; }
-
-body {
-  font-size: 0.9375rem;
-  line-height: 1.3125rem;
-  margin-bottom: 3.9375rem;
-  font-family: "Roboto";
-  font-weight: 400;
-  color: #111; }
-
-ul > li, ol > li {
+ul > li,
+ol > li {
   margin-left: 1.3125rem; }
 
 dl > dt {
@@ -1366,7 +1369,7 @@ button,
   display: inline-block;
   appearance: none;
   margin: 0;
-  padding: 0.4375rem 0.65625rem;
+  padding: 0.32813rem 0.65625rem;
   border: 0;
   border-radius: 4px;
   vertical-align: middle;
@@ -1378,7 +1381,8 @@ button,
 
 button[disabled],
 .btn-disabled {
-  background-color: #aaa; }
+  background-color: #aaa;
+  cursor: default; }
   button[disabled]:active,
   .btn-disabled:active {
     top: 0; }
@@ -1397,7 +1401,7 @@ button[disabled],
 
 .flash {
   padding: 0.65625rem; }
-  .flash > :last-child {
+  .flash > *:last-child {
     margin-bottom: 0; }
 
 .flash-positive {
@@ -1417,7 +1421,7 @@ button[disabled],
 
 .box {
   padding: 1.3125rem; }
-  .box > :last-child {
+  .box > *:last-child {
     margin-bottom: 0; }
 
 .navbar {
