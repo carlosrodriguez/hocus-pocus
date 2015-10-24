@@ -278,6 +278,7 @@ img {
 
 [class~="1/1"] {
   width: 100%;
+  max-width: 100%;
   -webkit-flex-basis: 100%;
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%; }
@@ -289,6 +290,7 @@ img {
 [class~="5/10"],
 [class~="6/12"] {
   width: 50%;
+  max-width: 50%;
   -webkit-flex-basis: 50%;
       -ms-flex-preferred-size: 50%;
           flex-basis: 50%; }
@@ -298,6 +300,7 @@ img {
 [class~="3/9"],
 [class~="4/12"] {
   width: 33.3333%;
+  max-width: 33.3333%;
   -webkit-flex-basis: 33.3333%;
       -ms-flex-preferred-size: 33.3333%;
           flex-basis: 33.3333%; }
@@ -307,6 +310,7 @@ img {
 [class~="6/9"],
 [class~="8/12"] {
   width: 66.6666%;
+  max-width: 66.6666%;
   -webkit-flex-basis: 66.6666%;
       -ms-flex-preferred-size: 66.6666%;
           flex-basis: 66.6666%; }
@@ -315,6 +319,7 @@ img {
 [class~="2/8"],
 [class~="3/12"] {
   width: 25%;
+  max-width: 25%;
   -webkit-flex-basis: 25%;
       -ms-flex-preferred-size: 25%;
           flex-basis: 25%; }
@@ -323,6 +328,7 @@ img {
 [class~="6/8"],
 [class~="9/12"] {
   width: 75%;
+  max-width: 75%;
   -webkit-flex-basis: 75%;
       -ms-flex-preferred-size: 75%;
           flex-basis: 75%; }
@@ -330,6 +336,7 @@ img {
 [class~="1/5"],
 [class~="2/10"] {
   width: 20%;
+  max-width: 20%;
   -webkit-flex-basis: 20%;
       -ms-flex-preferred-size: 20%;
           flex-basis: 20%; }
@@ -337,6 +344,7 @@ img {
 [class~="2/5"],
 [class~="4/10"] {
   width: 40%;
+  max-width: 40%;
   -webkit-flex-basis: 40%;
       -ms-flex-preferred-size: 40%;
           flex-basis: 40%; }
@@ -344,6 +352,7 @@ img {
 [class~="3/5"],
 [class~="6/10"] {
   width: 60%;
+  max-width: 60%;
   -webkit-flex-basis: 60%;
       -ms-flex-preferred-size: 60%;
           flex-basis: 60%; }
@@ -351,6 +360,7 @@ img {
 [class~="4/5"],
 [class~="8/10"] {
   width: 80%;
+  max-width: 80%;
   -webkit-flex-basis: 80%;
       -ms-flex-preferred-size: 80%;
           flex-basis: 80%; }
@@ -358,6 +368,7 @@ img {
 [class~="1/6"],
 [class~="2/12"] {
   width: 16.6666%;
+  max-width: 16.6666%;
   -webkit-flex-basis: 16.6666%;
       -ms-flex-preferred-size: 16.6666%;
           flex-basis: 16.6666%; }
@@ -365,114 +376,133 @@ img {
 [class~="5/6"],
 [class~="10/12"] {
   width: 83.3333%;
+  max-width: 83.3333%;
   -webkit-flex-basis: 83.3333%;
       -ms-flex-preferred-size: 83.3333%;
           flex-basis: 83.3333%; }
 
 [class~="1/8"] {
   width: 12.5%;
+  max-width: 12.5%;
   -webkit-flex-basis: 12.5%;
       -ms-flex-preferred-size: 12.5%;
           flex-basis: 12.5%; }
 
 [class~="3/8"] {
   width: 37.5%;
+  max-width: 37.5%;
   -webkit-flex-basis: 37.5%;
       -ms-flex-preferred-size: 37.5%;
           flex-basis: 37.5%; }
 
 [class~="5/8"] {
   width: 62.5%;
+  max-width: 62.5%;
   -webkit-flex-basis: 62.5%;
       -ms-flex-preferred-size: 62.5%;
           flex-basis: 62.5%; }
 
 [class~="7/8"] {
   width: 87.5%;
+  max-width: 87.5%;
   -webkit-flex-basis: 87.5%;
       -ms-flex-preferred-size: 87.5%;
           flex-basis: 87.5%; }
 
 [class~="1/9"] {
   width: 11.1111%;
+  max-width: 11.1111%;
   -webkit-flex-basis: 11.1111%;
       -ms-flex-preferred-size: 11.1111%;
           flex-basis: 11.1111%; }
 
 [class~="2/9"] {
   width: 22.2222%;
+  max-width: 22.2222%;
   -webkit-flex-basis: 22.2222%;
       -ms-flex-preferred-size: 22.2222%;
           flex-basis: 22.2222%; }
 
 [class~="4/9"] {
   width: 44.4444%;
+  max-width: 44.4444%;
   -webkit-flex-basis: 44.4444%;
       -ms-flex-preferred-size: 44.4444%;
           flex-basis: 44.4444%; }
 
 [class~="5/9"] {
   width: 55.5555%;
+  max-width: 55.5555%;
   -webkit-flex-basis: 55.5555%;
       -ms-flex-preferred-size: 55.5555%;
           flex-basis: 55.5555%; }
 
 [class~="7/9"] {
   width: 77.7777%;
+  max-width: 77.7777%;
   -webkit-flex-basis: 77.7777%;
       -ms-flex-preferred-size: 77.7777%;
           flex-basis: 77.7777%; }
 
 [class~="8/9"] {
   width: 88.8888%;
+  max-width: 88.8888%;
   -webkit-flex-basis: 88.8888%;
       -ms-flex-preferred-size: 88.8888%;
           flex-basis: 88.8888%; }
 
 [class~="1/10"] {
   width: 10%;
+  max-width: 10%;
   -webkit-flex-basis: 10%;
       -ms-flex-preferred-size: 10%;
           flex-basis: 10%; }
 
 [class~="3/10"] {
   width: 30%;
+  max-width: 30%;
   -webkit-flex-basis: 30%;
       -ms-flex-preferred-size: 30%;
           flex-basis: 30%; }
 
 [class~="7/10"] {
   width: 70%;
+  max-width: 70%;
   -webkit-flex-basis: 70%;
       -ms-flex-preferred-size: 70%;
           flex-basis: 70%; }
 
 [class~="9/10"] {
   width: 90%;
+  max-width: 90%;
   -webkit-flex-basis: 90%;
       -ms-flex-preferred-size: 90%;
           flex-basis: 90%; }
 
 [class~="1/12"] {
   width: 8.3333%;
+  max-width: 8.3333%;
   -webkit-flex-basis: 8.3333%;
       -ms-flex-preferred-size: 8.3333%;
           flex-basis: 8.3333%; }
 
 [class~="5/12"] {
   width: 41.6666%;
+  max-width: 41.6666%;
   -webkit-flex-basis: 41.6666%;
       -ms-flex-preferred-size: 41.6666%;
           flex-basis: 41.6666%; }
 
 [class~="7/12"] {
   width: 58.3333%;
+  max-width: 58.3333%;
   -webkit-flex-basis: 58.3333%;
       -ms-flex-preferred-size: 58.3333%;
           flex-basis: 58.3333%; }
 
 [class~="11/12"] {
   width: 91.6666%;
+  max-width: 91.6666%;
   -webkit-flex-basis: 91.6666%;
       -ms-flex-preferred-size: 91.6666%;
           flex-basis: 91.6666%; }
@@ -1080,7 +1110,7 @@ html {
   min-height: 100%; }
 
 body {
-  margin-bottom: 3.9375rem;
+  margin-bottom: 60px;
   font-family: "Roboto";
   font-weight: 400;
   color: #111; }
@@ -1094,32 +1124,33 @@ h1,
   font-size: 3.1875rem;
   line-height: 3.9375rem;
   margin-bottom: 1.3125rem;
-  margin-top: 2.625rem;
-  font-family: "Roboto"; }
+  margin-top: 2.625rem; }
 
 h2,
 .h2 {
   font-size: 2.125rem;
   line-height: 2.625rem;
   margin-bottom: 1.3125rem;
-  margin-top: 2.625rem;
-  font-family: "Roboto"; }
+  margin-top: 2.625rem; }
 
 h3,
 .h3 {
   font-size: 1.4375rem;
   line-height: 2.625rem;
   margin-bottom: 1.3125rem;
-  margin-top: 1.3125rem;
-  font-family: "Roboto"; }
+  margin-top: 1.3125rem; }
 
 h4, h5, h6,
 .h4, .h5, .h6 {
   font-size: 0.9375rem;
   line-height: 1.3125rem;
   margin-bottom: 1.3125rem;
-  margin-top: 1.3125rem;
-  font-family: "Roboto"; }
+  margin-top: 1.3125rem; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Roboto";
+  font-weight: 700; }
 
 strong, em, small, code, hr {
   line-height: 1; }
@@ -1469,7 +1500,7 @@ button[disabled],
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 3.9375rem;
+  height: 60px;
   width: 100%;
   padding-top: 1.3125rem;
   padding-bottom: 1.3125rem; }
