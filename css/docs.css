@@ -1166,9 +1166,6 @@ a {
   word-wrap: break-word;
   text-decoration: none;
   text-decoration: underline; }
-  a:active {
-    position: relative;
-    top: 1px; }
 
 sup, sub {
   vertical-align: baseline;
@@ -1294,9 +1291,6 @@ dd + dt {
     .list-menu > li > a:hover {
       color: #fff;
       background: #0074d9; }
-    .navbar-menu > li > a:active,
-    .list-menu > li > a:active {
-      top: 0px; }
 
 hr {
   height: 1px;
@@ -1426,9 +1420,6 @@ button[disabled],
 .btn-disabled {
   background-color: #aaa;
   cursor: default; }
-  button[disabled]:active,
-  .btn-disabled:active {
-    top: 0; }
 
 .btn-block {
   display: block;
