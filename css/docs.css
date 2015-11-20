@@ -1264,6 +1264,9 @@ small,
 .text-capitalize {
   text-transform: capitalize; }
 
+.text-muted {
+  color: #aaa; }
+
 .text-positive {
   color: #2ecc40; }
 
@@ -1356,9 +1359,11 @@ td, th {
 .table-bordered > tbody > tr > td {
   border: 1px solid #ddd; }
 
+.table-zebra > tr:nth-child(odd) > td,
 .table-zebra > tbody > tr:nth-child(odd) > td {
   background-color: rgba(221, 221, 221, 0.5); }
 
+.table-hover > tr:hover > td,
 .table-hover > tbody > tr:hover > td {
   background-color: rgba(221, 221, 221, 0.5); }
 
@@ -1427,6 +1432,8 @@ input[disabled] {
 .form-horizontal .grid-item > .form-item > label {
   padding-left: 0; }
 
+input[type="button"],
+input[type="submit"],
 button,
 .btn {
   padding-top: 0.39375rem;
@@ -1902,3 +1909,8 @@ p > code {
 .grid-preview-large {
   padding-top: 2.625rem;
   padding-bottom: 2.625rem; }
+
+.btn-repository {
+  background-color: #0074d9; }
+  .btn-repository:hover {
+    background-color: #0059a6; }

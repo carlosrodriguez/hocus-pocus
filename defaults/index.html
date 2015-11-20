@@ -17,9 +17,11 @@
             <a href="/" class="brand">Hocus-Pocus</a>
           </div>
           <div class="grid-item 1/2">
-            <ul class="navbar-menu mobile-hidden">
-              <li><a href="https://github.com/bkzl/hocus-pocus">View the GitHub project</a></li>
-            </ul>
+            <div>
+              <a href="https://github.com/bkzl/hocus-pocus" class="btn btn-repository">
+                Follow on GitHub
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -41,7 +43,6 @@
 <li><a href="/buttons">Buttons</a></li>
 <li><a href="/navbar">Navbar</a></li>
 <li><a href="/sticky-footer">Sticky Footer</a></li>
-<li><a href="/extras">Extras</a></li>
 
           </ul>
         </div>
@@ -60,38 +61,35 @@
 <li><a href="/buttons">Buttons</a></li>
 <li><a href="/navbar">Navbar</a></li>
 <li><a href="/sticky-footer">Sticky Footer</a></li>
-<li><a href="/extras">Extras</a></li>
 
             </ul>
           </div>
 
           <p>I prefer to adjust settings listed below per each project. List of all
 variables is available under <code>sass/_defaults.sass</code>.</p>
-<div class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="na">$color-ui</span><span class="o">:</span> <span class="nv">$color-silver</span>
-<span class="na">$color-btn</span><span class="o">:</span> <span class="nv">$color-black</span>
-<span class="na">$color-font</span><span class="o">:</span> <span class="nv">$color-black</span>
-<span class="na">$color-link</span><span class="o">:</span> <span class="nv">$color-blue</span>
+<div class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nv">$color-ui</span><span class="p">:</span> <span class="nv">$color-silver</span>
+<span class="nv">$color-btn</span><span class="p">:</span> <span class="nv">$color-black</span>
+<span class="nv">$color-font</span><span class="p">:</span> <span class="nv">$color-black</span>
+<span class="nv">$color-link</span><span class="p">:</span> <span class="nv">$color-blue</span>
 
-<span class="na">$font-leading</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.4</span>
-<span class="na">$font-size-base</span><span class="o">:</span> <span class="mi">15</span>
+<span class="nv">$font-leading</span><span class="p">:</span> <span class="m">1</span><span class="mi">.4</span>
+<span class="nv">$font-size-base</span><span class="p">:</span> <span class="m">15</span>
 
-<span class="na">$font-family-base</span><span class="o">:</span> <span class="no">sans-serif</span>
-<span class="na">$font-family-headings</span><span class="o">:</span> <span class="nv">$font-family-base</span>
-<span class="na">$font-family-monospace</span><span class="o">:</span> <span class="no">monospace</span>
+<span class="nv">$font-family-base</span><span class="p">:</span> <span class="nb">sans-serif</span>
+<span class="nv">$font-family-headings</span><span class="p">:</span> <span class="nv">$font-family-base</span>
+<span class="nv">$font-family-monospace</span><span class="p">:</span> <span class="nb">monospace</span>
 
-<span class="na">$grid-container</span><span class="o">:</span> <span class="mi">1020</span><span class="kt">px</span>
+<span class="nv">$grid-container</span><span class="p">:</span> <span class="m">1020px</span>
 
-<span class="na">$responsive-type</span><span class="o">:</span> <span class="n">mobile-first</span>
-<span class="na">$responsive-map</span><span class="o">:</span> <span class="p">(</span><span class="n">tablet</span><span class="o">:</span> <span class="mi">768</span><span class="kt">px</span> <span class="mi">1200</span><span class="kt">px</span><span class="o">,</span> <span class="n">desktop</span><span class="o">:</span> <span class="mi">1201</span><span class="kt">px</span><span class="p">)</span>
+<span class="nv">$responsive-type</span><span class="p">:</span> <span class="n">mobile-first</span>
+<span class="nv">$responsive-map</span><span class="p">:</span> <span class="p">(</span><span class="n">tablet</span><span class="o">:</span> <span class="m">768px</span> <span class="m">1200px</span><span class="o">,</span> <span class="n">desktop</span><span class="o">:</span> <span class="m">1201px</span><span class="p">)</span>
 
-<span class="na">$ui-extras</span><span class="o">:</span> <span class="n-Pseudo">true</span>
+<span class="nv">$link-underline</span><span class="p">:</span> <span class="bp">true</span>
+<span class="nv">$link-active</span><span class="p">:</span> <span class="bp">false</span>
 
-<span class="na">$link-underline</span><span class="o">:</span> <span class="n-Pseudo">true</span>
-<span class="na">$link-active</span><span class="o">:</span> <span class="n-Pseudo">false</span>
+<span class="nv">$navbar-background</span><span class="p">:</span> <span class="nv">$color-black</span>
 
-<span class="na">$navbar-background</span><span class="o">:</span> <span class="nv">$color-black</span>
-
-<span class="na">$sticky-footer-height</span><span class="o">:</span> <span class="mi">0</span>
+<span class="nv">$sticky-footer-height</span><span class="p">:</span> <span class="m">0</span>
 </code></pre></div>
 <h3>Colors</h3>
 
@@ -121,22 +119,22 @@ variables is available under <code>sass/_defaults.sass</code>.</p>
 
 <p>Size functions return a quotient/product of the provided value.</p>
 <div class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nt">div</span>
-  <span class="na">padding</span><span class="o">:</span> <span class="nf">quarter</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span> <span class="c1">// padding: 3px</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="nf">quarter</span><span class="p">(</span><span class="m">12px</span><span class="p">)</span> <span class="o">//</span> <span class="n">padding</span><span class="o">:</span> <span class="m">3px</span>
 
 <span class="nt">div</span>
-  <span class="na">padding</span><span class="o">:</span> <span class="nf">third</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span> <span class="c1">// padding: 4px</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="nf">third</span><span class="p">(</span><span class="m">12px</span><span class="p">)</span> <span class="o">//</span> <span class="n">padding</span><span class="o">:</span> <span class="m">4px</span>
 
 <span class="nt">div</span>
-  <span class="na">padding</span><span class="o">:</span> <span class="nf">halve</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span> <span class="c1">// padding: 6px</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="nf">halve</span><span class="p">(</span><span class="m">12px</span><span class="p">)</span> <span class="o">//</span> <span class="n">padding</span><span class="o">:</span> <span class="m">6px</span>
 
 <span class="nt">div</span>
-  <span class="na">padding</span><span class="o">:</span> <span class="nf">double</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span> <span class="c1">// padding: 24px</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="nf">double</span><span class="p">(</span><span class="m">12px</span><span class="p">)</span> <span class="o">//</span> <span class="n">padding</span><span class="o">:</span> <span class="m">24px</span>
 
 <span class="nt">div</span>
-  <span class="na">padding</span><span class="o">:</span> <span class="nf">triple</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span> <span class="c1">// padding: 36px</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="nf">triple</span><span class="p">(</span><span class="m">12px</span><span class="p">)</span> <span class="o">//</span> <span class="n">padding</span><span class="o">:</span> <span class="m">36px</span>
 
 <span class="nt">div</span>
-  <span class="na">padding</span><span class="o">:</span> <span class="nf">quadruple</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="p">)</span> <span class="c1">// padding: 48px</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="nf">quadruple</span><span class="p">(</span><span class="m">12px</span><span class="p">)</span> <span class="o">//</span> <span class="n">padding</span><span class="o">:</span> <span class="m">48px</span>
 </code></pre></div>
         </div>
       </div>
@@ -145,32 +143,24 @@ variables is available under <code>sass/_defaults.sass</code>.</p>
     <footer class="footer sticky-footer">
       <div class="container">
         <div class="grid grid-pair">
-          <div class="grid-item 1/2">
-            <div class="mobile-hidden">
-              Maintained by <a href="http://bkzl.github.io">bkzl</a>
-              under the <a href="https://github.com/bkzl/hocus-pocus/blob/master/LICENSE">MIT license</a>.
-            </div>
+          <div class="grid-item 1/2 mobile-1/1">
+            Maintained by <a href="http://bkzl.github.io">bkzl</a>
+            under the <a href="https://github.com/bkzl/hocus-pocus/blob/master/LICENSE">MIT license</a>.
           </div>
-          <div class="grid-item 1/2">
+          <div class="grid-item 1/2 mobile-hidden">
             Latest release: <a href="https://github.com/bkzl/hocus-pocus/tree/v0.1.3">v0.1.3</a>
           </div>
         </div>
       </div>
     </footer>
 
-    <script type="text/javascript">
-      var _gauges = _gauges || [];
-      (function() {
-        var t   = document.createElement('script');
-        t.type  = 'text/javascript';
-        t.async = true;
-        t.id    = 'gauges-tracker';
-        t.setAttribute('data-site-id', '55fc172892c6ac504901654a');
-        t.setAttribute('data-track-path', 'http://track.gaug.es/track.gif');
-        t.src = 'https://track.gaug.es/track.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(t, s);
-      })();
-    </script>
+    
+      <script type="text/javascript">
+        !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+        analytics.load("MHCdjmSpfnYsst2T14Vsl1BomVT7CV3X");
+        analytics.page()
+        }}();
+      </script>
+    
   </body>
 </html>
