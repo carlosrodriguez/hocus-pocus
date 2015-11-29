@@ -1,0 +1,27 @@
+<p>Images are verically aligned to the middle and their
+<code>box-sizing</code> is set to <code>content-box</code>.</p>
+<p>The <code>+img-replace</code> mixin allows to replace any element contains text with
+image.</p>
+<pre><code class="lang-scss"><span class="hljs-tag">div</span> {
+  <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> img-replace</span>(<span class="hljs-string">'path/to/img.svg'</span>,<span class="hljs-preprocessor"> 100px</span>,<span class="hljs-preprocessor"> 40px</span>);</span>
+}
+</code></pre>
+<h3 id="image-helpers">Image helpers</h3>
+<div class="example">
+  <img src="http://placehold.it/1200x200" alt="example" class="img-responsive">
+</div>
+
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"img.png"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"placeholder"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"img-responsive"</span>&gt;</span>
+</code></pre>
+<div class="example">
+  <img src="http://placehold.it/150x150" alt="example" class="img-rounded">
+</div>
+
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"img.png"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"placeholder"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"img-rounded"</span>&gt;</span>
+</code></pre>
+<div class="example">
+  <img src="http://placehold.it/150x150" alt="example" class="img-circle">
+</div>
+
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"img.png"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"placeholder"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"img-circle"</span>&gt;</span>
+</code></pre>

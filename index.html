@@ -31,86 +31,14 @@
     <div class="container padding-double-bottom">
       <div class="grid">
         <div class="grid-item 1/5 mobile-hidden">
-          <ul class="list-menu">
-            <li><a href="/">Home</a></li>
-<li><a href="/quick-start">Quick Start</a></li>
-<li><a href="/defaults">Defaults</a></li>
-<li><a href="/layout">Grid & Layout</a></li>
-<li><a href="/responsive">Responsive</a></li>
-<li><a href="/type">Type</a></li>
-<li><a href="/images">Images</a></li>
-<li><a href="/tables">Tables</a></li>
-<li><a href="/forms">Forms</a></li>
-<li><a href="/buttons">Buttons</a></li>
-<li><a href="/navbar">Navbar</a></li>
-<li><a href="/sticky-footer">Sticky Footer</a></li>
-
-          </ul>
+          <navigation list="menu"></navigation>
         </div>
         <div class="grid-item 4/5 mobile-1/1">
           <div class="hidden mobile-visible margin-double-bottom">
-            <ul class="list-inline">
-              <li><a href="/">Home</a></li>
-<li><a href="/quick-start">Quick Start</a></li>
-<li><a href="/defaults">Defaults</a></li>
-<li><a href="/layout">Grid & Layout</a></li>
-<li><a href="/responsive">Responsive</a></li>
-<li><a href="/type">Type</a></li>
-<li><a href="/images">Images</a></li>
-<li><a href="/tables">Tables</a></li>
-<li><a href="/forms">Forms</a></li>
-<li><a href="/buttons">Buttons</a></li>
-<li><a href="/navbar">Navbar</a></li>
-<li><a href="/sticky-footer">Sticky Footer</a></li>
-
-            </ul>
+            <navigation list="inline"></navigation>
           </div>
 
-          <p>Hocus-Pocus is a design-free <a href="http://sass-lang.com">Sass</a>
-micro-framework.</p>
-
-<p>The main idea behind is to make a universal and lightweight starter kit
-that only includes the most common stuff. There is no need to overwrite
-existing Hocus-Pocus classes because every default can be modified in
-a clean way by changing a variable. I wrote <a href="https://medium.com/@bkzl/hocus-pocus-e76a6d52801b">a short story</a>
-why have I started working on another CSS framework.</p>
-
-<p>Included features:</p>
-
-<ul>
-<li>Normalize</li>
-<li>Colors</li>
-<li>Typography with vertical rhythm</li>
-<li>Flexbox grid</li>
-<li>Global box-sizing set to border-box (excluding <code>&lt;img&gt;</code>)</li>
-<li>Responsive design support with customizable breakpoints and approach
-(you can choose between mobile-first and desktop-first)</li>
-<li>Components like: type, list, rule, image, table, form, box, navbar,
-sticky footer</li>
-<li>Layout helpers, spacing helpers, size helpers and visibility helpers</li>
-</ul>
-
-<p>Sites built with Hocus-Pocus:</p>
-
-<ul>
-<li><a href="https://status.shellycloud.com">Shelly Cloud Status</a></li>
-<li><a href="http://echotags.io">Echotags</a></li>
-</ul>
-
-<hr>
-
-<p>Hocus-Pocus could not exist without work of awesome people responsible for
-these projects:</p>
-
-<ul>
-<li><a href="https://github.com/inuitcss">inuitcss</a></li>
-<li><a href="https://github.com/primer/primer">primer</a></li>
-<li><a href="https://github.com/necolas/normalize.css">normalize.css</a></li>
-<li><a href="https://github.com/kristoferjoseph/flexboxgrid">flexboxgrid</a></li>
-<li><a href="https://github.com/hiulit/Sassy-Gridlover">sassy-gridlover</a></li>
-<li><a href="https://github.com/mrmrs/colors">colors</a></li>
-</ul>
-
+          <page></page>
         </div>
       </div>
     </div>
@@ -129,13 +57,19 @@ these projects:</p>
       </div>
     </footer>
 
-    
-      <script type="text/javascript">
-        !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
-        analytics.load("MHCdjmSpfnYsst2T14Vsl1BomVT7CV3X");
-        analytics.page()
-        }}();
-      </script>
-    
+    <script src="tag/navigation.tag" type="riot/tag"></script>
+    <script src="tag/page.tag" type="riot/tag"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/riot/2.3.11/riot+compiler.min.js"></script>
+    <script>
+      riot.mount('*');
+      riot.route.start(true);
+    </script>
+
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+      analytics.load("MHCdjmSpfnYsst2T14Vsl1BomVT7CV3X");
+      analytics.page()
+      }}();
+    </script>
   </body>
 </html>

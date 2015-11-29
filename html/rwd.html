@@ -1,0 +1,21 @@
+<p>Choose your preferred way of writing RWD by setting the
+<code>$rwd-type</code> variable to <code>mobile-first</code> or <code>desktop-first</code>.</p>
+<p>Define custom breakpoints as <code>$rwd-map</code> variable. You can provide values
+with one or two sizes.</p>
+<p>Each breakpoint gets visibility and grid helpers.</p>
+<pre><code class="lang-scss"><span class="hljs-variable">$rwd-type</span><span class="hljs-value">: desktop-first;</span>
+<span class="hljs-variable">$rwd-map</span><span class="hljs-value">: (mobile: <span class="hljs-number">680px</span>, tablet: <span class="hljs-number">681px</span> <span class="hljs-number">1200px</span>);</span>
+</code></pre>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"mobile-hidden"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"hidden mobile-visible"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-item 1/4 mobile-hidden"</span>&gt;</span>
+    ...
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-item 3/4 mobile-1/1"</span>&gt;</span>
+    ...
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>

@@ -1,0 +1,47 @@
+<p>Hocus-Pocus requires <a href="http://sass-lang.com">Sass</a> and
+<a href="https://github.com/postcss/autoprefixer">autoprefixer</a> to proper work.</p>
+<p>To install it use Bower:</p>
+<pre><code class="lang-sh">$ bower install hocus-pocus
+</code></pre>
+<p>Then import a main file just after your variables, but before the rest of stylesheets:</p>
+<pre><code class="lang-scss"><span class="hljs-comment">// Your defaults</span>
+<span class="hljs-variable">$font-family-base</span><span class="hljs-value">: <span class="hljs-string">"Open Sans"</span>, sans-serif;</span>
+<span class="hljs-variable">$grid-container</span><span class="hljs-value">: <span class="hljs-number">70rem</span>;</span>
+
+<span class="hljs-comment">// Hocus-Pocus include</span>
+<span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-string">"bower_components/hocus-pocus/sass/hocus-pocus"</span>;</span>
+
+<span class="hljs-comment">// Your stylesheets</span>
+<span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-string">"objects/meter"</span>;</span>
+<span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-string">"objects/price-box"</span>;</span>
+<span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-string">"inbox/landing-headings-fix"</span>;</span>
+</code></pre>
+<p>Stick to the rules from <a href="http://codeguide.co/#css">Mark Otto&#39;s Code Guide</a>.
+Hocus-Pocus applies a following naming convention:</p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- Element --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"media"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Element with a related sub-element --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"media"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"media-img"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">img</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"media-body"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Element with modifier --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"media media-milli"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-primary"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Element with state --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn is-btn-active"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn is-btn-disabled"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Element that requires a wrapper --&gt;</span>
+<span class="hljs-comment">&lt;!-- i.e. "position: relative" and "position: absolute" pair --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"box has-close-link"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"close-link"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- JavaScript handler --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"alert js-alert"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
