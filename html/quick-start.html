@@ -1,21 +1,32 @@
+<h3 id="installation">Installation</h3>
 <p>Hocus-Pocus requires <a href="http://sass-lang.com">Sass</a> and
 <a href="https://github.com/postcss/autoprefixer">autoprefixer</a> to proper work.</p>
-<p>To install it use Bower:</p>
+<p>Use Bower to install it:</p>
 <pre><code class="lang-sh">$ bower install hocus-pocus
 </code></pre>
-<p>Then import a main file just after your variables, but before the rest of stylesheets:</p>
-<pre><code class="lang-scss"><span class="hljs-comment">// Your defaults</span>
+<p>If you prefer, it&#39;s available as the NPM package too:</p>
+<pre><code class="lang-sh">$ npm install hocus-pocus
+</code></pre>
+<p>Then import a main file just after your variables, but before
+the rest of stylesheets. If you want to use color variables
+in your settings import them at the beginning.</p>
+<pre><code class="lang-scss"><span class="hljs-comment">// Import colors</span>
+<span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-string">"bower_components/hocus-pocus/hocus-pocus/scss/colors"</span>;</span>
+
+<span class="hljs-comment">// Define your settings</span>
 <span class="hljs-variable">$font-family-base</span><span class="hljs-value">: <span class="hljs-string">"Open Sans"</span>, sans-serif;</span>
 <span class="hljs-variable">$grid-container</span><span class="hljs-value">: <span class="hljs-number">70rem</span>;</span>
+<span class="hljs-variable">$navbar-background</span><span class="hljs-value">: <span class="hljs-variable">$color-blue</span>;</span>
 
-<span class="hljs-comment">// Hocus-Pocus include</span>
-<span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-string">"bower_components/hocus-pocus/sass/hocus-pocus"</span>;</span>
+<span class="hljs-comment">// Import framework</span>
+<span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-string">"bower_components/hocus-pocus/hocus-pocus"</span>;</span>
 
-<span class="hljs-comment">// Your stylesheets</span>
-<span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-string">"objects/meter"</span>;</span>
-<span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-string">"objects/price-box"</span>;</span>
-<span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-string">"inbox/landing-headings-fix"</span>;</span>
+<span class="hljs-comment">// Import your stylesheets</span>
+<span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-string">"compontents/meter"</span>,
+        <span class="hljs-string">"compontents/price-box"</span>,
+        <span class="hljs-string">"inbox/landing-headings-fix"</span>;</span>
 </code></pre>
+<h3 id="principles">Principles</h3>
 <p>Stick to the rules from <a href="http://codeguide.co/#css">Mark Otto&#39;s Code Guide</a>.
 Hocus-Pocus applies a following naming convention:</p>
 <pre><code class="lang-html"><span class="hljs-comment">&lt;!-- Element --&gt;</span>

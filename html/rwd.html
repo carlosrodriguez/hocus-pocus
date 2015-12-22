@@ -1,10 +1,16 @@
-<p>Choose your preferred way of writing RWD by setting the
+<p>Choose your preferred way of writing responsive web design by setting the
 <code>$rwd-type</code> variable to <code>mobile-first</code> or <code>desktop-first</code>.</p>
 <p>Define custom breakpoints as <code>$rwd-map</code> variable. You can provide values
 with one or two sizes.</p>
-<p>Each breakpoint gets visibility and grid helpers.</p>
+<p>Each breakpoint gets width, spacing, visibility helpers and a sass mixin.</p>
 <pre><code class="lang-scss"><span class="hljs-variable">$rwd-type</span><span class="hljs-value">: desktop-first;</span>
 <span class="hljs-variable">$rwd-map</span><span class="hljs-value">: (mobile: <span class="hljs-number">680px</span>, tablet: <span class="hljs-number">681px</span> <span class="hljs-number">1200px</span>);</span>
+
+<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> rwd</span>(<span class="hljs-string">'mobile'</span>) {</span>
+  <span class="hljs-tag">h1</span> {
+    <span class="hljs-attribute">color</span><span class="hljs-value">: red;</span>
+  }
+}
 </code></pre>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"mobile-hidden"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"hidden mobile-visible"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -15,7 +21,9 @@ with one or two sizes.</p>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-item 3/4 mobile-1/1"</span>&gt;</span>
-    ...
+    <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"mobile-no-margin-top"</span>&gt;</span>
+      ...
+    <span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 </code></pre>

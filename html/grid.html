@@ -181,7 +181,7 @@ and vertically.</p>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 </code></pre>
-<p>Or a grid with two elements where content of the first one is aligned to the
+<p>Grid with two elements where content of the first one is aligned to the
 left and content of the second one is aligned to the right.</p>
 <div class="example">
   <div class="grid grid-pair">
@@ -203,6 +203,56 @@ left and content of the second one is aligned to the right.</p>
     ...
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-item 1/2"</span>&gt;</span>
+    ...
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>Change grid items order:</p>
+<div class="example">
+  <div class="grid grid-reverse">
+    <div class="grid-item 1/3">
+      <div class="grid-preview">
+        .grid-item.1/3
+      </div>
+    </div>
+    <div class="grid-item 2/3">
+      <div class="grid-preview">
+        .grid-item.2/3
+      </div>
+    </div>
+  </div>
+</div>
+
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid grid-reverse"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-item 1/3"</span>&gt;</span>
+    ...
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-item 2/3"</span>&gt;</span>
+    ...
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>Or even stack elements:</p>
+<div class="example">
+  <div class="grid grid-stack">
+    <div class="grid-item 1/3">
+      <div class="grid-preview">
+        .grid-item.1/3
+      </div>
+    </div>
+    <div class="grid-item 2/3">
+      <div class="grid-preview">
+        .grid-item.2/3
+      </div>
+    </div>
+  </div>
+</div>
+
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid grid-stack"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-item 1/3"</span>&gt;</span>
+    ...
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-item 2/3"</span>&gt;</span>
     ...
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
