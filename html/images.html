@@ -1,12 +1,15 @@
-<p>Images are verically aligned to the middle and their
-<code>box-sizing</code> is set to <code>content-box</code>.</p>
-<p>The <code>+img-replace</code> mixin allows to replace any element contains text with
-image.</p>
-<pre><code class="lang-scss"><span class="hljs-tag">div</span> {
+<h3 id="images">Images</h3>
+<p>Images are vertically aligned to the middle of container and have
+<code>box-sizing</code> set to <code>content-box</code>.</p>
+<p>Replace any element that contains text with an image:</p>
+<pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> img-replace</span>(<span class="hljs-variable">$path</span>, <span class="hljs-variable">$width</span>, <span class="hljs-variable">$height</span>);</span>
+</code></pre>
+<p>Usage:</p>
+<pre><code class="lang-scss"><span class="hljs-class">.logo</span> {
   <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> img-replace</span>(<span class="hljs-string">'path/to/img.svg'</span>,<span class="hljs-preprocessor"> 100px</span>,<span class="hljs-preprocessor"> 40px</span>);</span>
 }
 </code></pre>
-<h3 id="image-helpers">Image helpers</h3>
+<h3 id="image-helpers">Image Helpers</h3>
 <div class="example">
   <img src="http://placehold.it/1200x200/39cccc/fff" alt="example" class="img-responsive">
 </div>

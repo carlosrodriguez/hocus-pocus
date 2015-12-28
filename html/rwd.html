@@ -1,14 +1,21 @@
-<p>Choose your preferred way of writing responsive web design by setting the
-<code>$rwd-type</code> variable to <code>mobile-first</code> or <code>desktop-first</code>.</p>
-<p>Define custom breakpoints as <code>$rwd-map</code> variable. You can provide values
-with one or two sizes.</p>
-<p>Each breakpoint gets width, spacing, visibility helpers and a sass mixin.</p>
+<h3 id="responsive-design">Responsive Design</h3>
+<p>Choose approach of writing responsive design that you prefer:
+<code>mobile-first</code> or <code>desktop-first</code>.</p>
+<p>Define custom breakpoints. Each of them gets a mixin and own set of helpers.</p>
+<p>Defaults:</p>
+<pre><code class="lang-scss"><span class="hljs-variable">$rwd-type</span><span class="hljs-value">: mobile-first;</span>  <span class="hljs-comment">// choose between `mobile-first` and `desktop-first`</span>
+<span class="hljs-variable">$rwd-map</span><span class="hljs-value">: (
+  <span class="hljs-string">'tablet'</span>: <span class="hljs-number">768px</span> <span class="hljs-number">1200px</span>,
+  <span class="hljs-string">'desktop'</span>: <span class="hljs-number">1201px</span>
+);</span>                        <span class="hljs-comment">// helpers are generated based on this map</span>
+</code></pre>
+<p>Usage:</p>
 <pre><code class="lang-scss"><span class="hljs-variable">$rwd-type</span><span class="hljs-value">: desktop-first;</span>
 <span class="hljs-variable">$rwd-map</span><span class="hljs-value">: (mobile: <span class="hljs-number">680px</span>, tablet: <span class="hljs-number">681px</span> <span class="hljs-number">1200px</span>);</span>
 
 <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> rwd</span>(<span class="hljs-string">'mobile'</span>) {</span>
   <span class="hljs-tag">h1</span> {
-    <span class="hljs-attribute">color</span><span class="hljs-value">: red;</span>
+    <span class="hljs-attribute">color</span><span class="hljs-value">: <span class="hljs-variable">$color-red</span>;</span>
   }
 }
 </code></pre>
@@ -26,4 +33,160 @@ with one or two sizes.</p>
     <span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<h3 id="width-helpers">Width Helpers</h3>
+<p>Width helpers work with various elements like grid items, boxes, form inputs,
+table cells etc.</p>
+<p>Fractions of these numbers are available: <code>n/1</code>, <code>n/2</code>, <code>n/3</code>, <code>n/4</code>,
+<code>n/5</code>, <code>n/6</code>, <code>n/8</code>, <code>n/9</code>, <code>n/10</code> and <code>n/12</code>.</p>
+<p>Width helpers are generated for each breakpoint in <code>$rwd-map</code>.</p>
+<p>Usage:</p>
+<div class="grid">
+  <div class="grid-item 1/1">
+    <div class="grid-preview">
+      .1/1
+    </div>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="grid-item 1/4">
+    <div class="grid-preview">
+      .1/4, .2/8, .3/12
+    </div>
+  </div>
+  <div class="grid-item 3/4">
+    <div class="grid-preview">
+      .3/4, .6/8, .9/12
+    </div>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="grid-item 2/5">
+    <div class="grid-preview">
+      .2/5, .4/10
+    </div>
+  </div>
+  <div class="grid-item 3/5">
+    <div class="grid-preview">
+      .3/5, .6/10
+    </div>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="grid-item 1/6">
+    <div class="grid-preview">
+      .1/6, .2/12
+    </div>
+  </div>
+  <div class="grid-item 5/6">
+    <div class="grid-preview">
+      .5/6, .10/12
+    </div>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="grid-item 1/2">
+    <div class="grid-preview">
+      .1/2, .2/4, .3/6, .4/8, .5/10, .6/12
+    </div>
+  </div>
+  <div class="grid-item 1/8">
+    <div class="grid-preview">
+      .1/8
+    </div>
+  </div>
+  <div class="grid-item 3/8">
+    <div class="grid-preview">
+      .3/8
+    </div>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="grid-item 1/5 mobile-1/2">
+    <div class="grid-preview">
+      .1/5.mobile-1/2
+    </div>
+  </div>
+  <div class="grid-item 4/5 mobile-1/2">
+    <div class="grid-preview">
+      .4/5.mobile-1/2
+    </div>
+  </div>
+</div>
+
+<h3 id="visibility-helpers">Visibility Helpers</h3>
+<p>Specify visibility of an element.</p>
+<p>Visibility helpers use <code>!important</code> and are generated for each breakpoint in <code>$rwd-map</code>.</p>
+<p>Following classes are available: <code>.hidden</code>, <code>.visible</code>, <code>.block</code>,
+<code>.inline-block</code> and <code>.inline</code></p>
+<p>Usage:</p>
+<div class="example">
+  <p class="inline mobile-hidden">Inline paragraph hidden on mobile</p>
+  <small class="hidden mobile-block">Block small text visible on mobile</small>
+</div>
+
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"inline mobile-hidden"</span>&gt;</span>Inline paragraph hidden on mobile<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">small</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"hidden mobile-block"</span>&gt;</span>Block small text visible on mobile<span class="hljs-tag">&lt;/<span class="hljs-title">small</span>&gt;</span>
+</code></pre>
+<h3 id="spacing-helpers">Spacing Helpers</h3>
+<p>Specify spacing (margin/padding) of an element.</p>
+<p>Spacing helpers use <code>!important</code> and are generated for each size
+in <code>$spacing-map</code> and each breakpoint in <code>$rwd-map</code>.</p>
+<p>Defaults:</p>
+<pre><code class="lang-scss"><span class="hljs-comment">// spacing helpers and media gutter modifiers are generated based on this map</span>
+<span class="hljs-variable">$spacing-map</span><span class="hljs-value">: (
+  <span class="hljs-string">'quarter'</span>: <span class="hljs-function">quarter</span>(<span class="hljs-variable">$spacing-unit</span>),
+  <span class="hljs-string">'third'</span>: <span class="hljs-function">third</span>(<span class="hljs-variable">$spacing-unit</span>),
+  <span class="hljs-string">'half'</span>: <span class="hljs-function">halve</span>(<span class="hljs-variable">$spacing-unit</span>),
+  <span class="hljs-string">'double'</span>: <span class="hljs-function">double</span>(<span class="hljs-variable">$spacing-unit</span>),
+  <span class="hljs-string">'triple'</span>: <span class="hljs-function">triple</span>(<span class="hljs-variable">$spacing-unit</span>),
+  <span class="hljs-string">'quadruple'</span>: <span class="hljs-function">quadruple</span>(<span class="hljs-variable">$spacing-unit</span>)
+);</span>
+</code></pre>
+<p>Usage:</p>
+<pre><code class="lang-scss"><span class="hljs-class">.margin</span><span class="hljs-attr_selector">[-size]</span><span class="hljs-attr_selector">[-type]</span>;
+<span class="hljs-class">.padding</span><span class="hljs-attr_selector">[-size]</span><span class="hljs-attr_selector">[-type]</span>;
+<span class="hljs-class">.no-margin</span><span class="hljs-attr_selector">[-type]</span>;
+<span class="hljs-class">.no-padding</span><span class="hljs-attr_selector">[-type]</span>;
+
+<span class="hljs-comment">/*
+ * Where [-type] is blank (all values) or one of these values:
+ *   -top, -right, -bottom, -left, -sides, -ends
+ *
+ * Where [-size] is blank ($spacing-unit) or one of these values:
+ *   -quarter, -third, -half, -double, -triple, -quadruple
+ */</span>
+</code></pre>
+<div class="example">
+  <div class="padding-ends bg-green text-white text-mono text-small">
+    .padding-ends
+  </div>
+  <div class="margin no-padding bg-olive text-white text-mono text-small">
+    .margin.no-padding
+  </div>
+  <div class="margin-double-bottom bg-teal text-white text-mono text-small">
+    .margin-double-bottom
+  </div>
+  <div class="padding-half-left padding-half-top mobile-no-padding-left bg-aqua text-white text-mono text-small">
+    .padding-half-left.padding-half-top.mobile-no-padding-left
+  </div>
+  <div class="mobile-margin-sides bg-blue text-white text-mono text-small">
+    .mobile-margin-sides
+  </div>
+  <div class="mobile-padding-half bg-navy text-white text-mono text-small">
+    .mobile-padding-half
+  </div>
+</div>
+
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"padding-ends"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"margin no-padding"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"margin-double-bottom"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"padding-half-left padding-half-top mobile-no-padding-left"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"mobile-margin-sides"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"mobile-padding-half"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 </code></pre>

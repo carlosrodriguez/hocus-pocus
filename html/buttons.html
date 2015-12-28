@@ -1,3 +1,11 @@
+<h3 id="buttons">Buttons</h3>
+<p>Define own button types:</p>
+<pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> btn</span>(<span class="hljs-variable">$name</span>, <span class="hljs-variable">$color</span>)</span>
+</code></pre>
+<p>Usage:</p>
+<pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> btn</span>(<span class="hljs-string">'primary'</span>, <span class="hljs-hexcolor">#00F</span>)</span>
+</code></pre>
+<h3 id="button-types">Button Types</h3>
 <div class="example">
   <button type="submit">Form button</button> <a href="#" class="btn">Link as a button</a>
 </div>
@@ -38,4 +46,3 @@
 
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-negative"</span>&gt;</span>Negative button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 </code></pre>
-<p>It&#39;s possible to define own button types with a <code>+btn($name, $color)</code> mixin.</p>

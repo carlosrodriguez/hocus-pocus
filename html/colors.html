@@ -1,3 +1,5 @@
+<h3 id="colors">Colors</h3>
+<p>Colors available as variables (so you can override them if you wish):</p>
 <div class="color-block bg-white text-muted">$color-white</div>
 <div class="color-block bg-silver">$color-silver</div>
 <div class="color-block bg-gray">$color-gray</div>
@@ -15,3 +17,66 @@
 <div class="color-block bg-fuchsia">$color-fuchsia</div>
 <div class="color-block bg-purple">$color-purple</div>
 <div class="color-block bg-maroon">$color-maroon</div>
+
+<p>Defaults:</p>
+<pre><code class="lang-scss"><span class="hljs-variable">$color-ui</span><span class="hljs-value">: <span class="hljs-variable">$color-silver</span>;</span>        <span class="hljs-comment">// ui elements color like rules, borders, form inputs</span>
+<span class="hljs-variable">$color-btn</span><span class="hljs-value">: <span class="hljs-variable">$color-black</span>;</span>        <span class="hljs-comment">// button color without any modifiers</span>
+<span class="hljs-variable">$color-font</span><span class="hljs-value">: <span class="hljs-variable">$color-black</span>;</span>       <span class="hljs-comment">// base font color</span>
+<span class="hljs-variable">$color-link</span><span class="hljs-value">: <span class="hljs-variable">$color-blue</span>;</span>        <span class="hljs-comment">// links color</span>
+<span class="hljs-variable">$color-muted</span><span class="hljs-value">: <span class="hljs-variable">$color-gray</span>;</span>       <span class="hljs-comment">// blockquote and `.text-muted` color</span>
+<span class="hljs-variable">$color-disabled</span><span class="hljs-value">: <span class="hljs-variable">$color-ui</span>;</span>      <span class="hljs-comment">// disabled form input and buttons color</span>
+<span class="hljs-variable">$color-brand</span><span class="hljs-value">: <span class="hljs-variable">$color-blue</span>;</span>       <span class="hljs-comment">// brand color</span>
+<span class="hljs-variable">$color-positive</span><span class="hljs-value">: <span class="hljs-variable">$color-green</span>;</span>   <span class="hljs-comment">// positive color</span>
+<span class="hljs-variable">$color-negative</span><span class="hljs-value">: <span class="hljs-variable">$color-red</span>;</span>     <span class="hljs-comment">// negative color</span>
+<span class="hljs-variable">$color-informative</span><span class="hljs-value">: <span class="hljs-variable">$color-blue</span>;</span> <span class="hljs-comment">// informative color</span>
+<span class="hljs-variable">$color-map</span><span class="hljs-value">: (
+  <span class="hljs-string">'white'</span>: <span class="hljs-variable">$color-white</span>,
+  <span class="hljs-string">'silver'</span>: <span class="hljs-variable">$color-silver</span>,
+  <span class="hljs-string">'gray'</span>: <span class="hljs-variable">$color-gray</span>,
+  <span class="hljs-string">'black'</span>: <span class="hljs-variable">$color-black</span>,
+  <span class="hljs-string">'red'</span>: <span class="hljs-variable">$color-red</span>,
+  <span class="hljs-string">'orange'</span>: <span class="hljs-variable">$color-orange</span>,
+  <span class="hljs-string">'yellow'</span>: <span class="hljs-variable">$color-yellow</span>,
+  <span class="hljs-string">'lime'</span>: <span class="hljs-variable">$color-lime</span>,
+  <span class="hljs-string">'green'</span>: <span class="hljs-variable">$color-green</span>,
+  <span class="hljs-string">'olive'</span>: <span class="hljs-variable">$color-olive</span>,
+  <span class="hljs-string">'teal'</span>: <span class="hljs-variable">$color-teal</span>,
+  <span class="hljs-string">'aqua'</span>: <span class="hljs-variable">$color-aqua</span>,
+  <span class="hljs-string">'blue'</span>: <span class="hljs-variable">$color-blue</span>,
+  <span class="hljs-string">'navy'</span>: <span class="hljs-variable">$color-navy</span>,
+  <span class="hljs-string">'fuchsia'</span>: <span class="hljs-variable">$color-fuchsia</span>,
+  <span class="hljs-string">'purple'</span>: <span class="hljs-variable">$color-purple</span>,
+  <span class="hljs-string">'maroon'</span>: <span class="hljs-variable">$color-maroon</span>,
+  <span class="hljs-string">'brand'</span>: <span class="hljs-variable">$color-brand</span>,
+  <span class="hljs-string">'positive'</span>: <span class="hljs-variable">$color-positive</span>,
+  <span class="hljs-string">'negative'</span>: <span class="hljs-variable">$color-negative</span>,
+  <span class="hljs-string">'informative'</span>: <span class="hljs-variable">$color-informative</span>,
+  <span class="hljs-string">'muted'</span>: <span class="hljs-variable">$color-muted</span>
+);</span>                               <span class="hljs-comment">// color helpers are generated based on this map</span>
+</code></pre>
+<h3 id="color-helpers">Color Helpers</h3>
+<p>Specify text and background color of an element.</p>
+<p>Color helpers use <code>!important</code> and are generated for each color in <code>$color-map</code>.</p>
+<p>Usage:</p>
+<pre><code class="lang-scss"><span class="hljs-class">.text</span><span class="hljs-attr_selector">[-color]</span>;
+<span class="hljs-class">.bg</span><span class="hljs-attr_selector">[-color]</span>;
+
+<span class="hljs-comment">/*
+ * Where [-color] is one of these values:
+ *   -aqua, -blue, -navy, -teal, -green, -olive, -lime, -yellow, -orange,
+ *   -red, -fuchsia, -purple, -maroon, -white, -silver, -grey, -black,
+ *   -informative, -positive, -negative, -brand, -muted
+ */</span>
+</code></pre>
+<div class="example">
+  <p class="text-muted">Paragraph with a muted text</p>
+  <p class="text-brand">Paragraph with a brand text</p>
+  <p class="bg-negative">Paragraph with a negative background</p>
+  <p class="bg-black text-white">Paragraph with a black background and white text</p>
+</div>
+
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-muted"</span>&gt;</span>Paragraph with a muted text<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-brand"</span>&gt;</span>Paragraph with a brand text<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bg-negative"</span>&gt;</span>Paragraph with a negative background<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bg-black text-white"</span>&gt;</span>Paragraph with a black background and white text<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+</code></pre>

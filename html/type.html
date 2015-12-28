@@ -1,13 +1,33 @@
-<p>Base font is described by: <code>$font-size-base</code>,
-<code>$font-family-base</code>, <code>$font-weight-normal</code> and <code>$color-font</code>.</p>
-<p>The <code>+font-size</code> mixin allows to set a custom font size
-and keep the proper vertical rhythm:</p>
-<pre><code class="lang-scss"><span class="hljs-tag">div</span> {
+<h3 id="typography">Typography</h3>
+<p>Typography elements keep vertical rhythm and have custom reset.</p>
+<p>Defaults:</p>
+<pre><code class="lang-scss"><span class="hljs-variable">$font-leading</span><span class="hljs-value">: <span class="hljs-number">1.4</span>;</span>                       <span class="hljs-comment">// base font leading</span>
+<span class="hljs-variable">$font-size-micro</span><span class="hljs-value">: <span class="hljs-number">11</span>;</span>                     <span class="hljs-comment">// font size of `.text-micro`</span>
+<span class="hljs-variable">$font-size-small</span><span class="hljs-value">: <span class="hljs-number">13</span>;</span>                     <span class="hljs-comment">// font size of `small` and `.text-small`</span>
+<span class="hljs-variable">$font-size-base</span><span class="hljs-value">: <span class="hljs-number">15</span>;</span>                      <span class="hljs-comment">// base font size</span>
+<span class="hljs-variable">$font-size-lead</span><span class="hljs-value">: <span class="hljs-number">18</span>;</span>                      <span class="hljs-comment">// font size of `.text-lead` element</span>
+
+<span class="hljs-variable">$font-family-base</span><span class="hljs-value">: sans-serif;</span>            <span class="hljs-comment">// base font family</span>
+<span class="hljs-variable">$font-family-headings</span><span class="hljs-value">: <span class="hljs-variable">$font-family-base</span>;</span> <span class="hljs-comment">// headings font family</span>
+<span class="hljs-variable">$font-family-monospace</span><span class="hljs-value">: monospace;</span>        <span class="hljs-comment">// monospace font family</span>
+
+<span class="hljs-variable">$font-weight-light</span><span class="hljs-value">: <span class="hljs-number">100</span>;</span>                  <span class="hljs-comment">// light font weight</span>
+<span class="hljs-variable">$font-weight-normal</span><span class="hljs-value">: <span class="hljs-number">400</span>;</span>                 <span class="hljs-comment">// normal/base font weight</span>
+<span class="hljs-variable">$font-weight-bold</span><span class="hljs-value">: <span class="hljs-number">700</span>;</span>                   <span class="hljs-comment">// bold font weight</span>
+<span class="hljs-variable">$font-weight-headings</span><span class="hljs-value">: <span class="hljs-variable">$font-weight-bold</span>;</span> <span class="hljs-comment">// default font weight of headings</span>
+
+<span class="hljs-variable">$link-underline</span><span class="hljs-value">: true;</span>                    <span class="hljs-comment">// should links have underline</span>
+<span class="hljs-variable">$link-active</span><span class="hljs-value">: false;</span>                      <span class="hljs-comment">// should active links look like clicked</span>
+</code></pre>
+<p>Set a custom font size and keep the proper vertical rhythm:</p>
+<pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> font-size</span>(<span class="hljs-variable">$size</span>);</span>
+</code></pre>
+<p>Usage:</p>
+<pre><code class="lang-scss"><span class="hljs-class">.text</span> {
   <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> font-size</span>(<span class="hljs-number">12</span>);</span>
 }
 </code></pre>
 <h3 id="headings">Headings</h3>
-<p>You can change a font-weight for all headings with <code>$font-weight-headings</code>.</p>
 <div class="example">
   <h1>Heading Level 1</h1>
 </div>
@@ -120,7 +140,7 @@ and keep the proper vertical rhythm:</p>
 
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span>
 </code></pre>
-<h3 id="helpers">Helpers</h3>
+<h3 id="text-helpers">Text Helpers</h3>
 <div class="example">
   <p class="text-micro">Micro text</p>
   <p class="text-small">Small text</p>
@@ -166,16 +186,4 @@ and keep the proper vertical rhythm:</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-left"</span>&gt;</span>Left aligned text<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-center"</span>&gt;</span>Center aligned text<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>Right aligned text<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-</code></pre>
-<div class="example">
-  <p class="text-muted">Muted text</p>
-  <p class="text-positive">Positive text</p>
-  <p class="text-negative">Negative text</p>
-  <p class="text-informative">Informative text</p>
-</div>
-
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-muted"</span>&gt;</span>Muted text<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-positive"</span>&gt;</span>Positive text<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-negative"</span>&gt;</span>Negative text<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-informative"</span>&gt;</span>Informative text<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
 </code></pre>

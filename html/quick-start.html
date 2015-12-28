@@ -1,15 +1,13 @@
-<h3 id="installation">Installation</h3>
+<h3 id="requirements">Requirements</h3>
 <p>Hocus-Pocus requires <a href="http://sass-lang.com">Sass</a> and
 <a href="https://github.com/postcss/autoprefixer">autoprefixer</a> to proper work.</p>
-<p>Use Bower to install it:</p>
+<h3 id="installation">Installation</h3>
+<p>Bower is a recommended way to install:</p>
 <pre><code class="lang-sh">$ bower install hocus-pocus
 </code></pre>
-<p>If you prefer, it&#39;s available as the NPM package too:</p>
-<pre><code class="lang-sh">$ npm install hocus-pocus
-</code></pre>
-<p>Then import a main file just after your variables, but before
-the rest of stylesheets. If you want to use color variables
-in your settings import them at the beginning.</p>
+<p>Then import a main file just after your defaults, but before
+rest of stylesheets. If you want to use color variables
+in your settings import them first.</p>
 <pre><code class="lang-scss"><span class="hljs-comment">// Import colors</span>
 <span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-string">"bower_components/hocus-pocus/hocus-pocus/scss/colors"</span>;</span>
 
@@ -26,9 +24,13 @@ in your settings import them at the beginning.</p>
         <span class="hljs-string">"compontents/price-box"</span>,
         <span class="hljs-string">"inbox/landing-headings-fix"</span>;</span>
 </code></pre>
+<h3 id="npm">Npm</h3>
+<p>If you prefer, Hocus-Pocus is available as a npm package:</p>
+<pre><code class="lang-sh">$ npm install hocus-pocus
+</code></pre>
 <h3 id="principles">Principles</h3>
-<p>Stick to the rules from <a href="http://codeguide.co/#css">Mark Otto&#39;s Code Guide</a>.
-Hocus-Pocus applies a following naming convention:</p>
+<p>Stick to rules from <a href="http://codeguide.co/#css">Mark Otto&#39;s Code Guide</a>.</p>
+<p>Hocus-Pocus applies a following naming convention:</p>
 <pre><code class="lang-html"><span class="hljs-comment">&lt;!-- Element --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"media"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
